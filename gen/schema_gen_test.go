@@ -142,7 +142,7 @@ func TestGenerate(t *testing.T) {
 					Name: "Pet",
 					Fields: []*ir.Field{
 						{
-							Name: "ID",
+							Name: "Id",
 							Type: &ir.Type{
 								Kind:      "primitive",
 								Primitive: ir.Int64,

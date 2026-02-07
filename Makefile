@@ -20,10 +20,6 @@ test_examples:
 test_fast:
 	go test ./...
 
-logo:
-	inkscape -z -w 512 -h 512 _logo/logo.svg -e _logo/logo.x512.png
-	inkscape -z -w 256 -h 256 _logo/logo.svg -e _logo/logo.x256.png
-
 tidy:
 	go mod tidy
 
@@ -40,5 +36,5 @@ lint:
 clean: tidy_all generate examples
 
 commit_gen:
-	git add ./examples ./internal/integration/*/*_gen*.go
+	git add ./examples
 	git commit -m "chore: commit generated files"

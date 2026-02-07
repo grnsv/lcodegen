@@ -187,7 +187,6 @@ func templateFunctions() template.FuncMap {
 				Type:     t,
 			}
 		},
-		"print_go": ir.PrintGoValue,
 		"print_php": ir.PrintPhpValue,
 		// We use any to prevent template type matching errors
 		// for type aliases (e.g. for quoting ir.ContentType).

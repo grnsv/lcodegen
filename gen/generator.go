@@ -23,21 +23,19 @@ import (
 
 // Generator is OpenAPI-to-Laravel generator.
 type Generator struct {
-	opt               GenerateOptions
-	parseOpts         ParseOptions
-	api               *openapi.API
-	servers           []ir.Server
-	operations        []*ir.Operation
-	defaultOperations []*ir.Operation // Operations without an operation group.
-	operationGroups   []*ir.OperationGroup
-	webhooks          []*ir.Operation
-	securities        map[string]*ir.Security
-	tstorage          *tstorage
-	errType           *ir.Response
-	webhookRouter     WebhookRouter
-	router            Router
-	imports           map[string]string
-	equalitySpecs     []*ir.EqualityMethodSpec // Types requiring Equal() methods for uniqueItems validation
+	opt             GenerateOptions
+	parseOpts       ParseOptions
+	api             *openapi.API
+	servers         []ir.Server
+	operations      []*ir.Operation
+	operationGroups []*ir.OperationGroup
+	webhooks        []*ir.Operation
+	securities      map[string]*ir.Security
+	tstorage        *tstorage
+	errType         *ir.Response
+	webhookRouter   WebhookRouter
+	router          Router
+	imports         map[string]string
 
 	// Cached classified type lists, populated by prepareLaravelData.
 	dtoTypes       []*ir.Type
@@ -147,9 +145,6 @@ func (g *Generator) makeIR(api *openapi.API) error {
 		return errors.Wrap(err, "operations")
 	}
 
-	// Collect types that need Equal() and Hash() methods for complex uniqueItems validation
-	g.collectEqualitySpecs()
-
 	return nil
 }
 
@@ -224,7 +219,7 @@ func (g *Generator) makeOps(ops []*openapi.Operation) error {
 
 	fixPhpTypes(types)
 	sortOperations(g.operations)
-	_, g.operationGroups = groupOperations(g.operations, g.errType != nil)
+	g.operationGroups = groupOperations(g.operations, g.errType != nil)
 	g.prepareLaravelData()
 
 	return nil
@@ -307,10 +302,7 @@ func sortOperations(ops []*ir.Operation) {
 	})
 }
 
-func groupOperations(ops []*ir.Operation, hasErrorResponse bool) (
-	defaultOperations []*ir.Operation,
-	operationGroups []*ir.OperationGroup,
-) {
+func groupOperations(ops []*ir.Operation, hasErrorResponse bool) []*ir.OperationGroup {
 	groups := make(map[string]*ir.OperationGroup)
 	for _, op := range ops {
 		groupName := inferControllerName(op)
@@ -326,12 +318,12 @@ func groupOperations(ops []*ir.Operation, hasErrorResponse bool) (
 		group.Operations = append(group.Operations, op)
 	}
 
-	operationGroups = maps.Values(groups)
+	operationGroups := maps.Values(groups)
 	slices.SortStableFunc(operationGroups, func(a, b *ir.OperationGroup) int {
 		return strings.Compare(a.Name, b.Name)
 	})
 
-	return defaultOperations, operationGroups
+	return operationGroups
 }
 
 // inferControllerName determines the controller name for an operation.

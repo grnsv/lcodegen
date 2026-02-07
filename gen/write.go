@@ -9,7 +9,6 @@ import (
 	"regexp"
 	"runtime"
 	"runtime/pprof"
-	"slices"
 	"sync"
 	"text/template"
 
@@ -339,43 +338,6 @@ func (g *Generator) WriteSource(fs FileSystem, pkgName string, laravelPaths Lara
 	}
 
 	return grp.Wait()
-}
-
-func (g *Generator) hasAnyType(check func(t *ir.Type) bool) bool {
-	for _, t := range g.tstorage.types {
-		if check(t) {
-			return true
-		}
-	}
-	return false
-}
-
-func (g *Generator) hasDefaultFields() bool {
-	return g.hasAnyType((*ir.Type).HasDefaultFields)
-}
-
-func (g *Generator) hasJSON() bool {
-	return g.hasAnyType(func(t *ir.Type) bool {
-		return t.HasFeature("json")
-	})
-}
-
-func (g *Generator) hasValidators() bool {
-	return g.hasAnyType((*ir.Type).NeedValidation)
-}
-
-func (g *Generator) hasParams() bool {
-	hasParams := func(op *ir.Operation) bool {
-		return len(op.Params) > 0
-	}
-	return slices.ContainsFunc(g.operations, hasParams) ||
-		slices.ContainsFunc(g.webhooks, hasParams)
-}
-
-func (g *Generator) hasURIObjectParams() bool {
-	return g.hasAnyType(func(t *ir.Type) bool {
-		return (t.IsStruct() || t.IsMap()) && t.HasFeature("uri")
-	})
 }
 
 // OperationGroups returns operation groups for Laravel generation.

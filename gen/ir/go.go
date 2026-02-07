@@ -5,18 +5,6 @@ import (
 	"strings"
 )
 
-// PrintGoValue prints given value as Go value.
-func PrintGoValue(v any) string {
-	switch v := v.(type) {
-	case nil:
-		return ""
-	case string:
-		return fmt.Sprintf("%q", v)
-	default:
-		return fmt.Sprintf("%#v", v)
-	}
-}
-
 // PrintPhpValue prints given value as PHP literal.
 func PrintPhpValue(v any) string {
 	switch v := v.(type) {

@@ -17,7 +17,7 @@ func TestNames(t *testing.T) {
 		AllowMP bool
 		Error   bool
 	}{
-		{"user_id", "UserID", false, false},
+		{"user_id", "UserId", false, false},
 		{"userId", "UserId", false, false},
 		{"foo+bar", "FooPlusBar", true, false},
 		{"foo+bar", "FooBar", false, false},
