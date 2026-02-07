@@ -5,8 +5,8 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/ogen-go/ogen/internal/naming"
-	"github.com/ogen-go/ogen/jsonschema"
+	"github.com/grnsv/lcodegen/internal/naming"
+	"github.com/grnsv/lcodegen/jsonschema"
 )
 
 func (t *Type) EncodeFn() string {

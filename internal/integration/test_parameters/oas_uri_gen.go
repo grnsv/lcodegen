@@ -7,9 +7,9 @@ import (
 	"strconv"
 
 	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/conv"
-	"github.com/ogen-go/ogen/uri"
-	"github.com/ogen-go/ogen/validate"
+	"github.com/grnsv/lcodegen/conv"
+	"github.com/grnsv/lcodegen/uri"
+	"github.com/grnsv/lcodegen/validate"
 )
 
 // EncodeURI encodes OneLevelObject as URI form.

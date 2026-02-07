@@ -7,9 +7,9 @@ import (
 	"github.com/go-faster/jx"
 	"github.com/stretchr/testify/require"
 
-	api "github.com/ogen-go/ogen/internal/integration/sample_api"
-	"github.com/ogen-go/ogen/json"
-	"github.com/ogen-go/ogen/validate"
+	api "github.com/grnsv/lcodegen/internal/integration/sample_api"
+	"github.com/grnsv/lcodegen/json"
+	"github.com/grnsv/lcodegen/validate"
 )
 
 func TestValidateRequired(t *testing.T) {

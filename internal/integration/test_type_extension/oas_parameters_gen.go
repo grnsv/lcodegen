@@ -7,12 +7,12 @@ import (
 
 	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/_testdata/testtypes"
-	"github.com/ogen-go/ogen/conv"
-	"github.com/ogen-go/ogen/json"
-	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
+	"github.com/grnsv/lcodegen/_testdata/testtypes"
+	"github.com/grnsv/lcodegen/conv"
+	"github.com/grnsv/lcodegen/json"
+	"github.com/grnsv/lcodegen/middleware"
+	"github.com/grnsv/lcodegen/ogenerrors"
+	"github.com/grnsv/lcodegen/uri"
 )
 
 // OptionalParams is parameters of optional operation.

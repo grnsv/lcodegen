@@ -3,10 +3,10 @@ package parser
 import (
 	"github.com/go-faster/errors"
 
-	"github.com/ogen-go/ogen"
-	"github.com/ogen-go/ogen/jsonpointer"
-	"github.com/ogen-go/ogen/location"
-	"github.com/ogen-go/ogen/openapi"
+	ogen "github.com/grnsv/lcodegen"
+	"github.com/grnsv/lcodegen/jsonpointer"
+	"github.com/grnsv/lcodegen/location"
+	"github.com/grnsv/lcodegen/openapi"
 )
 
 func (p *parser) parseResponses(

@@ -48,10 +48,10 @@ func TestAddPathParts(t *testing.T) {
 		},
 		{
 			Root:    exampleAPI,
-			Parts:   []string{"/repo/", "ogen-go", "/", "ogen", "/issues"},
-			Path:    "/api/v1/repo/ogen-go/ogen/issues",
+			Parts:   []string{"/repo/", "grnsv", "/", "lcodegen", "/issues"},
+			Path:    "/api/v1/repo/grnsv/lcodegen/issues",
 			RawPath: "",
-			URL:     "https://example.com/api/v1/repo/ogen-go/ogen/issues",
+			URL:     "https://example.com/api/v1/repo/grnsv/lcodegen/issues",
 		},
 		{
 			Root:    exampleAPI,
@@ -80,10 +80,10 @@ func TestAddPathParts(t *testing.T) {
 		},
 		{
 			Root:    escapedBase,
-			Parts:   []string{"/repo/", "ogen-go", "/", "ogen", "/issues"},
-			Path:    "/api/v/1/repo/ogen-go/ogen/issues",
-			RawPath: "/api/v%2F1/repo/ogen-go/ogen/issues",
-			URL:     "https://example.com/api/v%2F1/repo/ogen-go/ogen/issues",
+			Parts:   []string{"/repo/", "grnsv", "/", "lcodegen", "/issues"},
+			Path:    "/api/v/1/repo/grnsv/lcodegen/issues",
+			RawPath: "/api/v%2F1/repo/grnsv/lcodegen/issues",
+			URL:     "https://example.com/api/v%2F1/repo/grnsv/lcodegen/issues",
 		},
 		{
 			Root:    escapedBase,

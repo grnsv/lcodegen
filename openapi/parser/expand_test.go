@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ogen-go/ogen"
-	"github.com/ogen-go/ogen/openapi/parser"
+	ogen "github.com/grnsv/lcodegen"
+	"github.com/grnsv/lcodegen/openapi/parser"
 )
 
 func TestExpand(t *testing.T) {

@@ -10,7 +10,7 @@ labels: bug
 ### What version of ogen are you using?
 
 ```bash
-$ go list -m github.com/ogen-go/ogen
+$ go list -m github.com/grnsv/lcodegen
 ```
 
 ### Can this issue be reproduced with the latest version?
@@ -32,4 +32,3 @@ Link to schema/small snippet of schema will be helpful.
 ### What did you see instead?
 
 <!-- The observed behavior -->
-

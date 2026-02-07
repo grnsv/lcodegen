@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ogen-go/ogen/jsonschema"
+	"github.com/grnsv/lcodegen/jsonschema"
 )
 
 func Test_mergeEnums(t *testing.T) {

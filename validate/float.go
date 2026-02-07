@@ -7,7 +7,7 @@ import (
 
 	"github.com/go-faster/errors"
 
-	"github.com/ogen-go/ogen/ogenregex"
+	"github.com/grnsv/lcodegen/ogenregex"
 )
 
 // Float validates float numbers.

@@ -14,8 +14,8 @@ import (
 
 	"github.com/go-faster/errors"
 
-	"github.com/ogen-go/ogen/internal/naming"
-	"github.com/ogen-go/ogen/jsonschema"
+	"github.com/grnsv/lcodegen/internal/naming"
+	"github.com/grnsv/lcodegen/jsonschema"
 )
 
 func cleanRef(r jsonschema.Ref) string {

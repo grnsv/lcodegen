@@ -4,7 +4,7 @@ package api
 
 import (
 	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/validate"
+	"github.com/grnsv/lcodegen/validate"
 )
 
 func (s PascalExceptionStrat) Validate() error {

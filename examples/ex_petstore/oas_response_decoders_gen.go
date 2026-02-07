@@ -9,10 +9,10 @@ import (
 
 	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/conv"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
-	"github.com/ogen-go/ogen/validate"
+	"github.com/grnsv/lcodegen/conv"
+	"github.com/grnsv/lcodegen/ogenerrors"
+	"github.com/grnsv/lcodegen/uri"
+	"github.com/grnsv/lcodegen/validate"
 )
 
 func decodeCreatePetsResponse(resp *http.Response) (res *CreatePetsCreated, _ error) {

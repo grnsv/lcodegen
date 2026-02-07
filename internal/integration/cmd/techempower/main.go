@@ -8,7 +8,7 @@ import (
 
 	"go.opentelemetry.io/otel/trace/noop"
 
-	"github.com/ogen-go/ogen/internal/integration/techempower"
+	"github.com/grnsv/lcodegen/internal/integration/techempower"
 )
 
 type server struct{}

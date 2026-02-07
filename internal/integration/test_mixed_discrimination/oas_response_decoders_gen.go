@@ -5,7 +5,7 @@ package api
 import (
 	"net/http"
 
-	"github.com/ogen-go/ogen/validate"
+	"github.com/grnsv/lcodegen/validate"
 )
 
 func decodeLogEventResponse(resp *http.Response) (res *LogEventOK, _ error) {

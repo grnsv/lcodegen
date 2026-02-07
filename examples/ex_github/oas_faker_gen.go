@@ -1353,12 +1353,12 @@ func (s *Actor) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -1376,7 +1376,7 @@ func (s *AlertCreatedAt) SetFake() {
 func (s *AlertHTMLURL) SetFake() {
 	var unwrapped url.URL
 	{
-		unwrapped = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+		unwrapped = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 	}
 	*s = AlertHTMLURL(unwrapped)
 }
@@ -1385,7 +1385,7 @@ func (s *AlertHTMLURL) SetFake() {
 func (s *AlertInstancesURL) SetFake() {
 	var unwrapped url.URL
 	{
-		unwrapped = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+		unwrapped = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 	}
 	*s = AlertInstancesURL(unwrapped)
 }
@@ -1403,7 +1403,7 @@ func (s *AlertNumber) SetFake() {
 func (s *AlertURL) SetFake() {
 	var unwrapped url.URL
 	{
-		unwrapped = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+		unwrapped = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 	}
 	*s = AlertURL(unwrapped)
 }
@@ -1736,7 +1736,7 @@ func (s *ApplicationGrant) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -1787,7 +1787,7 @@ func (s *ApplicationGrantApp) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -1894,12 +1894,12 @@ func (s *AppsCreateFromManifestCreated) SetFake() {
 	}
 	{
 		{
-			s.ExternalURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ExternalURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -2789,7 +2789,7 @@ func (s *Authorization) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -2880,7 +2880,7 @@ func (s *AuthorizationApp) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -2937,17 +2937,17 @@ func (s *Autolink) SetFake() {
 func (s *BaseGist) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.CommitsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CommitsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -2962,17 +2962,17 @@ func (s *BaseGist) SetFake() {
 	}
 	{
 		{
-			s.GitPullURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.GitPullURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.GitPushURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.GitPushURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -3012,7 +3012,7 @@ func (s *BaseGist) SetFake() {
 	}
 	{
 		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -3129,7 +3129,7 @@ func (s *Blob) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -3263,7 +3263,7 @@ func (s *BranchProtectionRequiredLinearHistory) SetFake() {
 func (s *BranchProtectionRequiredSignatures) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -3313,22 +3313,22 @@ func (s *BranchProtectionRequiredStatusChecks) SetFake() {
 func (s *BranchRestrictionPolicy) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.UsersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.UsersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.AppsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AppsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -3803,7 +3803,7 @@ func (s *BranchWithProtection) SetFake() {
 	}
 	{
 		{
-			s.ProtectionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ProtectionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -3827,7 +3827,7 @@ func (s *BranchWithProtectionLinks) SetFake() {
 	}
 	{
 		{
-			s.Self = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.Self = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -4020,7 +4020,7 @@ func (s *CheckRunOutput) SetFake() {
 	}
 	{
 		{
-			s.AnnotationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AnnotationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -4636,7 +4636,7 @@ func (s *CodeOfConduct) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -4655,7 +4655,7 @@ func (s *CodeOfConduct) SetFake() {
 func (s *CodeOfConductSimple) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -5239,7 +5239,7 @@ func (s *CodeScanningAnalysisToolVersion) SetFake() {
 func (s *CodeScanningAnalysisURL) SetFake() {
 	var unwrapped url.URL
 	{
-		unwrapped = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+		unwrapped = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 	}
 	*s = CodeScanningAnalysisURL(unwrapped)
 }
@@ -5554,17 +5554,17 @@ func (s *CodeSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.GitURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.GitURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -5656,7 +5656,7 @@ func (s *Collaborator) SetFake() {
 	}
 	{
 		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -5666,17 +5666,17 @@ func (s *Collaborator) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -5696,17 +5696,17 @@ func (s *Collaborator) SetFake() {
 	}
 	{
 		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -5716,7 +5716,7 @@ func (s *Collaborator) SetFake() {
 	}
 	{
 		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -5820,12 +5820,12 @@ func (s *CombinedCommitStatus) SetFake() {
 	}
 	{
 		{
-			s.CommitURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CommitURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -5834,7 +5834,7 @@ func (s *CombinedCommitStatus) SetFake() {
 func (s *Commit) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -5849,12 +5849,12 @@ func (s *Commit) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -5933,12 +5933,12 @@ func (s *CommitActivity) SetFake() {
 func (s *CommitComment) SetFake() {
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -6007,7 +6007,7 @@ func (s *CommitComment) SetFake() {
 func (s *CommitCommit) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -6051,7 +6051,7 @@ func (s *CommitCommitTree) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -6060,27 +6060,27 @@ func (s *CommitCommitTree) SetFake() {
 func (s *CommitComparison) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.PermalinkURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.PermalinkURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DiffURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DiffURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.PatchURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.PatchURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -6212,7 +6212,7 @@ func (s *CommitParentsItem) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -6226,7 +6226,7 @@ func (s *CommitParentsItem) SetFake() {
 func (s *CommitSearchResultItem) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -6236,12 +6236,12 @@ func (s *CommitSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -6322,7 +6322,7 @@ func (s *CommitSearchResultItemCommit) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -6360,7 +6360,7 @@ func (s *CommitSearchResultItemCommitTree) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -6515,7 +6515,7 @@ func (s *ContentFile) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -6564,7 +6564,7 @@ func (s *ContentFileLinks) SetFake() {
 	}
 	{
 		{
-			s.Self = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.Self = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -6885,7 +6885,7 @@ func (s *DeployKey) SetFake() {
 func (s *Deployment) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -6950,12 +6950,12 @@ func (s *Deployment) SetFake() {
 	}
 	{
 		{
-			s.StatusesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.StatusesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -7000,7 +7000,7 @@ func (s *DeploymentPayload0) SetFake() {
 func (s *DeploymentSimple) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -7045,12 +7045,12 @@ func (s *DeploymentSimple) SetFake() {
 	}
 	{
 		{
-			s.StatusesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.StatusesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -7074,7 +7074,7 @@ func (s *DeploymentSimple) SetFake() {
 func (s *DeploymentStatus) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -7109,7 +7109,7 @@ func (s *DeploymentStatus) SetFake() {
 	}
 	{
 		{
-			s.TargetURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TargetURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -7124,12 +7124,12 @@ func (s *DeploymentStatus) SetFake() {
 	}
 	{
 		{
-			s.DeploymentURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DeploymentURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -7188,17 +7188,17 @@ func (s *DiffEntry) SetFake() {
 	}
 	{
 		{
-			s.BlobURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.BlobURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.RawURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.RawURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ContentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ContentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -8060,7 +8060,7 @@ func (s *EventRepo) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -8103,7 +8103,7 @@ func (s *Feed) SetFake() {
 			for i := 0; i < 0; i++ {
 				var elem url.URL
 				{
-					elem = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+					elem = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 				}
 				s.CurrentUserOrganizationUrls = append(s.CurrentUserOrganizationUrls, elem)
 			}
@@ -8487,7 +8487,7 @@ func (s *FullRepository) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -8502,7 +8502,7 @@ func (s *FullRepository) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -8552,27 +8552,27 @@ func (s *FullRepository) SetFake() {
 	}
 	{
 		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -8622,12 +8622,12 @@ func (s *FullRepository) SetFake() {
 	}
 	{
 		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -8657,7 +8657,7 @@ func (s *FullRepository) SetFake() {
 	}
 	{
 		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -8667,22 +8667,22 @@ func (s *FullRepository) SetFake() {
 	}
 	{
 		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -8702,12 +8702,12 @@ func (s *FullRepository) SetFake() {
 	}
 	{
 		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -9019,7 +9019,7 @@ func (s *GistComment) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -9053,7 +9053,7 @@ func (s *GistComment) SetFake() {
 func (s *GistCommit) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -9308,17 +9308,17 @@ func (s *GistSimpleFilesItem) SetFake() {
 func (s *GistSimpleForkOf) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.CommitsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CommitsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -9333,17 +9333,17 @@ func (s *GistSimpleForkOf) SetFake() {
 	}
 	{
 		{
-			s.GitPullURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.GitPullURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.GitPushURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.GitPushURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -9383,7 +9383,7 @@ func (s *GistSimpleForkOf) SetFake() {
 	}
 	{
 		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -9797,7 +9797,7 @@ func (s *GitCommit) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -9839,7 +9839,7 @@ func (s *GitCommit) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -9891,12 +9891,12 @@ func (s *GitCommitParentsItem) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -9910,7 +9910,7 @@ func (s *GitCommitTree) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -10241,7 +10241,7 @@ func (s *GitRef) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -10265,7 +10265,7 @@ func (s *GitRefObject) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -10289,7 +10289,7 @@ func (s *GitTag) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -10328,7 +10328,7 @@ func (s *GitTagObject) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -10361,7 +10361,7 @@ func (s *GitTree) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -10737,17 +10737,17 @@ func (s *Hook) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TestURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TestURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.PingURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.PingURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -11160,22 +11160,22 @@ func (s *Import) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.AuthorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AuthorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -11306,12 +11306,12 @@ func (s *Integration) SetFake() {
 	}
 	{
 		{
-			s.ExternalURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ExternalURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -11470,12 +11470,12 @@ func (s *Issue) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -11485,17 +11485,17 @@ func (s *Issue) SetFake() {
 	}
 	{
 		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -11641,7 +11641,7 @@ func (s *IssueComment) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -11661,7 +11661,7 @@ func (s *IssueComment) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -11681,7 +11681,7 @@ func (s *IssueComment) SetFake() {
 	}
 	{
 		{
-			s.IssueURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.IssueURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -11715,7 +11715,7 @@ func (s *IssueEvent) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -11866,7 +11866,7 @@ func (s *IssueEventMilestone) SetFake() {
 func (s *IssueEventProjectCard) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -11876,7 +11876,7 @@ func (s *IssueEventProjectCard) SetFake() {
 	}
 	{
 		{
-			s.ProjectURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ProjectURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -11992,12 +11992,12 @@ func (s *IssuePullRequest) SetFake() {
 func (s *IssueSearchResultItem) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -12007,17 +12007,17 @@ func (s *IssueSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -12246,12 +12246,12 @@ func (s *IssueSimple) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -12261,17 +12261,17 @@ func (s *IssueSimple) SetFake() {
 	}
 	{
 		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -13247,7 +13247,7 @@ func (s *Label) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -13286,7 +13286,7 @@ func (s *LabelSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -13361,7 +13361,7 @@ func (s *License) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -13446,7 +13446,7 @@ func (s *LicenseContent) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -13505,7 +13505,7 @@ func (s *LicenseContentLinks) SetFake() {
 	}
 	{
 		{
-			s.Self = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.Self = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -13629,7 +13629,7 @@ func (s *MarkdownRenderReqMode) SetFake() {
 func (s *MarketplaceAccount) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -13668,12 +13668,12 @@ func (s *MarketplaceAccount) SetFake() {
 func (s *MarketplaceListingPlan) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.AccountsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AccountsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -14116,7 +14116,7 @@ func (s *Migration) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -14500,17 +14500,17 @@ func (s *MigrationsUpdateImportReq) SetFake() {
 func (s *Milestone) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.LabelsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.LabelsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -14619,7 +14619,7 @@ func (s *MinimalRepository) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -14634,7 +14634,7 @@ func (s *MinimalRepository) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -14684,27 +14684,27 @@ func (s *MinimalRepository) SetFake() {
 	}
 	{
 		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -14754,12 +14754,12 @@ func (s *MinimalRepository) SetFake() {
 	}
 	{
 		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -14789,7 +14789,7 @@ func (s *MinimalRepository) SetFake() {
 	}
 	{
 		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -14799,22 +14799,22 @@ func (s *MinimalRepository) SetFake() {
 	}
 	{
 		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -14834,7 +14834,7 @@ func (s *MinimalRepository) SetFake() {
 	}
 	{
 		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -15268,7 +15268,7 @@ func (s *NilURI) SetFake() {
 func (s *NullableCodeOfConductSimple) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -15292,12 +15292,12 @@ func (s *NullableCodeOfConductSimple) SetFake() {
 func (s *NullableCommunityHealthFile) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -15355,12 +15355,12 @@ func (s *NullableIntegration) SetFake() {
 	}
 	{
 		{
-			s.ExternalURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ExternalURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -15500,17 +15500,17 @@ func (s *NullableLicenseSimple) SetFake() {
 func (s *NullableMilestone) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.LabelsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.LabelsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -15619,7 +15619,7 @@ func (s *NullableMinimalRepository) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -15634,7 +15634,7 @@ func (s *NullableMinimalRepository) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -15684,27 +15684,27 @@ func (s *NullableMinimalRepository) SetFake() {
 	}
 	{
 		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -15754,12 +15754,12 @@ func (s *NullableMinimalRepository) SetFake() {
 	}
 	{
 		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -15789,7 +15789,7 @@ func (s *NullableMinimalRepository) SetFake() {
 	}
 	{
 		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -15799,22 +15799,22 @@ func (s *NullableMinimalRepository) SetFake() {
 	}
 	{
 		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -15834,7 +15834,7 @@ func (s *NullableMinimalRepository) SetFake() {
 	}
 	{
 		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -16128,7 +16128,7 @@ func (s *NullableRepository) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -16143,7 +16143,7 @@ func (s *NullableRepository) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -16193,27 +16193,27 @@ func (s *NullableRepository) SetFake() {
 	}
 	{
 		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -16263,12 +16263,12 @@ func (s *NullableRepository) SetFake() {
 	}
 	{
 		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -16298,7 +16298,7 @@ func (s *NullableRepository) SetFake() {
 	}
 	{
 		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -16308,22 +16308,22 @@ func (s *NullableRepository) SetFake() {
 	}
 	{
 		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -16343,12 +16343,12 @@ func (s *NullableRepository) SetFake() {
 	}
 	{
 		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -17139,7 +17139,7 @@ func (s *NullableScopedInstallation) SetFake() {
 	}
 	{
 		{
-			s.RepositoriesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.RepositoriesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -17245,7 +17245,7 @@ func (s *NullableSimpleUser) SetFake() {
 	}
 	{
 		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -17255,17 +17255,17 @@ func (s *NullableSimpleUser) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -17285,17 +17285,17 @@ func (s *NullableSimpleUser) SetFake() {
 	}
 	{
 		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -17305,7 +17305,7 @@ func (s *NullableSimpleUser) SetFake() {
 	}
 	{
 		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -17339,7 +17339,7 @@ func (s *NullableTeamSimple) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -17369,12 +17369,12 @@ func (s *NullableTeamSimple) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.RepositoriesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.RepositoriesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -20495,7 +20495,7 @@ func (s *OptTopicSearchResultItemRelatedItemTopicRelation) SetFake() {
 func (s *OptURI) SetFake() {
 	var elem url.URL
 	{
-		elem = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+		elem = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 	}
 	s.SetTo(elem)
 }
@@ -20644,12 +20644,12 @@ func (s *OrgHook) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.PingURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.PingURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -20729,7 +20729,7 @@ func (s *OrgHookConfig) SetFake() {
 func (s *OrgMembership) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -20744,7 +20744,7 @@ func (s *OrgMembership) SetFake() {
 	}
 	{
 		{
-			s.OrganizationURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.OrganizationURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -20836,17 +20836,17 @@ func (s *OrganizationFull) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -20946,7 +20946,7 @@ func (s *OrganizationFull) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -21222,17 +21222,17 @@ func (s *OrganizationSimple) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -22361,7 +22361,7 @@ func (s *PackagesRestorePackageVersionForUserUnauthorized) SetFake() {
 func (s *Page) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -22420,7 +22420,7 @@ func (s *Page) SetFake() {
 func (s *PageBuild) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -22473,7 +22473,7 @@ func (s *PageBuildError) SetFake() {
 func (s *PageBuildStatus) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -22902,12 +22902,12 @@ func (s *PorterAuthor) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ImportURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ImportURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -22969,7 +22969,7 @@ func (s *PrivateUser) SetFake() {
 	}
 	{
 		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -22979,17 +22979,17 @@ func (s *PrivateUser) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -23009,17 +23009,17 @@ func (s *PrivateUser) SetFake() {
 	}
 	{
 		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -23029,7 +23029,7 @@ func (s *PrivateUser) SetFake() {
 	}
 	{
 		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -23192,22 +23192,22 @@ func (s *PrivateUserPlan) SetFake() {
 func (s *Project) SetFake() {
 	{
 		{
-			s.OwnerURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.OwnerURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ColumnsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ColumnsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -23271,7 +23271,7 @@ func (s *Project) SetFake() {
 func (s *ProjectCard) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -23321,7 +23321,7 @@ func (s *ProjectCard) SetFake() {
 	}
 	{
 		{
-			s.ColumnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ColumnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -23331,7 +23331,7 @@ func (s *ProjectCard) SetFake() {
 	}
 	{
 		{
-			s.ProjectURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ProjectURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -23340,17 +23340,17 @@ func (s *ProjectCard) SetFake() {
 func (s *ProjectColumn) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ProjectURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ProjectURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.CardsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CardsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -24219,7 +24219,7 @@ func (s *ProjectsUpdateUnauthorized) SetFake() {
 func (s *ProtectedBranch) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -24273,7 +24273,7 @@ func (s *ProtectedBranch) SetFake() {
 func (s *ProtectedBranchAdminEnforced) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -24305,7 +24305,7 @@ func (s *ProtectedBranchAllowForcePushes) SetFake() {
 func (s *ProtectedBranchEnforceAdmins) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -24409,7 +24409,7 @@ func (s *ProtectedBranchRequiredLinearHistory) SetFake() {
 func (s *ProtectedBranchRequiredPullRequestReviews) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -24438,17 +24438,17 @@ func (s *ProtectedBranchRequiredPullRequestReviews) SetFake() {
 func (s *ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.UsersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.UsersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -24481,7 +24481,7 @@ func (s *ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions) SetFake
 func (s *ProtectedBranchRequiredSignatures) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -24510,7 +24510,7 @@ func (s *PublicUser) SetFake() {
 	}
 	{
 		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -24520,17 +24520,17 @@ func (s *PublicUser) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -24550,17 +24550,17 @@ func (s *PublicUser) SetFake() {
 	}
 	{
 		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -24570,7 +24570,7 @@ func (s *PublicUser) SetFake() {
 	}
 	{
 		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -24718,7 +24718,7 @@ func (s *PublicUserPlan) SetFake() {
 func (s *PullRequest) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -24733,32 +24733,32 @@ func (s *PullRequest) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DiffURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DiffURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.PatchURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.PatchURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.IssueURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.IssueURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.CommitsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CommitsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReviewCommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReviewCommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -24768,12 +24768,12 @@ func (s *PullRequest) SetFake() {
 	}
 	{
 		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.StatusesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.StatusesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25043,12 +25043,12 @@ func (s *PullRequestBaseRepo) SetFake() {
 	}
 	{
 		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25058,12 +25058,12 @@ func (s *PullRequestBaseRepo) SetFake() {
 	}
 	{
 		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25073,7 +25073,7 @@ func (s *PullRequestBaseRepo) SetFake() {
 	}
 	{
 		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25098,12 +25098,12 @@ func (s *PullRequestBaseRepo) SetFake() {
 	}
 	{
 		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25143,12 +25143,12 @@ func (s *PullRequestBaseRepo) SetFake() {
 	}
 	{
 		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25188,7 +25188,7 @@ func (s *PullRequestBaseRepo) SetFake() {
 	}
 	{
 		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25198,22 +25198,22 @@ func (s *PullRequestBaseRepo) SetFake() {
 	}
 	{
 		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25223,7 +25223,7 @@ func (s *PullRequestBaseRepo) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25368,7 +25368,7 @@ func (s *PullRequestBaseRepo) SetFake() {
 	}
 	{
 		{
-			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25414,7 +25414,7 @@ func (s *PullRequestBaseRepo) SetFake() {
 func (s *PullRequestBaseRepoOwner) SetFake() {
 	{
 		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25424,7 +25424,7 @@ func (s *PullRequestBaseRepoOwner) SetFake() {
 	}
 	{
 		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25444,7 +25444,7 @@ func (s *PullRequestBaseRepoOwner) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25464,17 +25464,17 @@ func (s *PullRequestBaseRepoOwner) SetFake() {
 	}
 	{
 		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25489,7 +25489,7 @@ func (s *PullRequestBaseRepoOwner) SetFake() {
 	}
 	{
 		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25499,7 +25499,7 @@ func (s *PullRequestBaseRepoOwner) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -25537,7 +25537,7 @@ func (s *PullRequestBaseRepoPermissions) SetFake() {
 func (s *PullRequestBaseUser) SetFake() {
 	{
 		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25547,7 +25547,7 @@ func (s *PullRequestBaseUser) SetFake() {
 	}
 	{
 		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25567,7 +25567,7 @@ func (s *PullRequestBaseUser) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25587,17 +25587,17 @@ func (s *PullRequestBaseUser) SetFake() {
 	}
 	{
 		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25612,7 +25612,7 @@ func (s *PullRequestBaseUser) SetFake() {
 	}
 	{
 		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25622,7 +25622,7 @@ func (s *PullRequestBaseUser) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -25705,12 +25705,12 @@ func (s *PullRequestHeadRepo) SetFake() {
 	}
 	{
 		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25720,12 +25720,12 @@ func (s *PullRequestHeadRepo) SetFake() {
 	}
 	{
 		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25735,7 +25735,7 @@ func (s *PullRequestHeadRepo) SetFake() {
 	}
 	{
 		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25760,12 +25760,12 @@ func (s *PullRequestHeadRepo) SetFake() {
 	}
 	{
 		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25805,12 +25805,12 @@ func (s *PullRequestHeadRepo) SetFake() {
 	}
 	{
 		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25850,7 +25850,7 @@ func (s *PullRequestHeadRepo) SetFake() {
 	}
 	{
 		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25860,22 +25860,22 @@ func (s *PullRequestHeadRepo) SetFake() {
 	}
 	{
 		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -25885,7 +25885,7 @@ func (s *PullRequestHeadRepo) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26030,7 +26030,7 @@ func (s *PullRequestHeadRepo) SetFake() {
 	}
 	{
 		{
-			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26105,7 +26105,7 @@ func (s *PullRequestHeadRepoLicense) SetFake() {
 func (s *PullRequestHeadRepoOwner) SetFake() {
 	{
 		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26115,7 +26115,7 @@ func (s *PullRequestHeadRepoOwner) SetFake() {
 	}
 	{
 		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26135,7 +26135,7 @@ func (s *PullRequestHeadRepoOwner) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26155,17 +26155,17 @@ func (s *PullRequestHeadRepoOwner) SetFake() {
 	}
 	{
 		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26180,7 +26180,7 @@ func (s *PullRequestHeadRepoOwner) SetFake() {
 	}
 	{
 		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26190,7 +26190,7 @@ func (s *PullRequestHeadRepoOwner) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -26228,7 +26228,7 @@ func (s *PullRequestHeadRepoPermissions) SetFake() {
 func (s *PullRequestHeadUser) SetFake() {
 	{
 		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26238,7 +26238,7 @@ func (s *PullRequestHeadUser) SetFake() {
 	}
 	{
 		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26258,7 +26258,7 @@ func (s *PullRequestHeadUser) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26278,17 +26278,17 @@ func (s *PullRequestHeadUser) SetFake() {
 	}
 	{
 		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26303,7 +26303,7 @@ func (s *PullRequestHeadUser) SetFake() {
 	}
 	{
 		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26313,7 +26313,7 @@ func (s *PullRequestHeadUser) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -26554,12 +26554,12 @@ func (s *PullRequestReview) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.PullRequestURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.PullRequestURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26673,12 +26673,12 @@ func (s *PullRequestReviewComment) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.PullRequestURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.PullRequestURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26761,7 +26761,7 @@ func (s *PullRequestReviewCommentLinks) SetFake() {
 func (s *PullRequestReviewCommentLinksHTML) SetFake() {
 	{
 		{
-			s.Href = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.Href = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -26770,7 +26770,7 @@ func (s *PullRequestReviewCommentLinksHTML) SetFake() {
 func (s *PullRequestReviewCommentLinksPullRequest) SetFake() {
 	{
 		{
-			s.Href = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.Href = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -26779,7 +26779,7 @@ func (s *PullRequestReviewCommentLinksPullRequest) SetFake() {
 func (s *PullRequestReviewCommentLinksSelf) SetFake() {
 	{
 		{
-			s.Href = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.Href = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -26858,7 +26858,7 @@ func (s *PullRequestReviewRequest) SetFake() {
 func (s *PullRequestSimple) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26873,32 +26873,32 @@ func (s *PullRequestSimple) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DiffURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DiffURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.PatchURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.PatchURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.IssueURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.IssueURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.CommitsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CommitsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReviewCommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReviewCommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -26908,12 +26908,12 @@ func (s *PullRequestSimple) SetFake() {
 	}
 	{
 		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.StatusesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.StatusesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -27735,7 +27735,7 @@ func (s *ReactionContent) SetFake() {
 func (s *ReactionRollup) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -28105,17 +28105,17 @@ func (s *ReferrerTraffic) SetFake() {
 func (s *Release) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.AssetsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AssetsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -28231,12 +28231,12 @@ func (s *Release) SetFake() {
 func (s *ReleaseAsset) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.BrowserDownloadURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.BrowserDownloadURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -28335,7 +28335,7 @@ func (s *RepoSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -28350,7 +28350,7 @@ func (s *RepoSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -28420,7 +28420,7 @@ func (s *RepoSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -28435,12 +28435,12 @@ func (s *RepoSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -28450,7 +28450,7 @@ func (s *RepoSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -28465,7 +28465,7 @@ func (s *RepoSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -28495,27 +28495,27 @@ func (s *RepoSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -28550,7 +28550,7 @@ func (s *RepoSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -28560,7 +28560,7 @@ func (s *RepoSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -28595,7 +28595,7 @@ func (s *RepoSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -28615,7 +28615,7 @@ func (s *RepoSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -31395,7 +31395,7 @@ func (s *Repository) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -31410,7 +31410,7 @@ func (s *Repository) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -31460,27 +31460,27 @@ func (s *Repository) SetFake() {
 	}
 	{
 		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -31530,12 +31530,12 @@ func (s *Repository) SetFake() {
 	}
 	{
 		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -31565,7 +31565,7 @@ func (s *Repository) SetFake() {
 	}
 	{
 		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -31575,22 +31575,22 @@ func (s *Repository) SetFake() {
 	}
 	{
 		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -31610,12 +31610,12 @@ func (s *Repository) SetFake() {
 	}
 	{
 		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -31928,12 +31928,12 @@ func (s *RepositorySubscription) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -32481,7 +32481,7 @@ func (s *RepositoryTemplateRepositoryPermissions) SetFake() {
 func (s *ReviewComment) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -32556,12 +32556,12 @@ func (s *ReviewComment) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.PullRequestURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.PullRequestURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -34757,7 +34757,7 @@ func (s *ShortBranchCommit) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -34853,7 +34853,7 @@ func (s *SimpleCommitStatus) SetFake() {
 	}
 	{
 		{
-			s.TargetURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TargetURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -34868,7 +34868,7 @@ func (s *SimpleCommitStatus) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -34912,7 +34912,7 @@ func (s *SimpleUser) SetFake() {
 	}
 	{
 		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -34922,17 +34922,17 @@ func (s *SimpleUser) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -34952,17 +34952,17 @@ func (s *SimpleUser) SetFake() {
 	}
 	{
 		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -34972,7 +34972,7 @@ func (s *SimpleUser) SetFake() {
 	}
 	{
 		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35069,7 +35069,7 @@ func (s *Status) SetFake() {
 func (s *StatusCheckPolicy) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35091,7 +35091,7 @@ func (s *StatusCheckPolicy) SetFake() {
 	}
 	{
 		{
-			s.ContextsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ContextsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -35110,12 +35110,12 @@ func (s *Tag) SetFake() {
 	}
 	{
 		{
-			s.ZipballURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ZipballURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TarballURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TarballURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35134,7 +35134,7 @@ func (s *TagCommit) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 }
@@ -35183,12 +35183,12 @@ func (s *Team) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35198,7 +35198,7 @@ func (s *Team) SetFake() {
 	}
 	{
 		{
-			s.RepositoriesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.RepositoriesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35237,7 +35237,7 @@ func (s *TeamDiscussion) SetFake() {
 	}
 	{
 		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35252,7 +35252,7 @@ func (s *TeamDiscussion) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35277,7 +35277,7 @@ func (s *TeamDiscussion) SetFake() {
 	}
 	{
 		{
-			s.TeamURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TeamURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35292,7 +35292,7 @@ func (s *TeamDiscussion) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35336,12 +35336,12 @@ func (s *TeamDiscussionComment) SetFake() {
 	}
 	{
 		{
-			s.DiscussionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DiscussionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35361,7 +35361,7 @@ func (s *TeamDiscussionComment) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35385,12 +35385,12 @@ func (s *TeamFull) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35425,7 +35425,7 @@ func (s *TeamFull) SetFake() {
 	}
 	{
 		{
-			s.RepositoriesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.RepositoriesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35474,7 +35474,7 @@ func (s *TeamFullPrivacy) SetFake() {
 func (s *TeamMembership) SetFake() {
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35680,7 +35680,7 @@ func (s *TeamRepository) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35695,7 +35695,7 @@ func (s *TeamRepository) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35745,27 +35745,27 @@ func (s *TeamRepository) SetFake() {
 	}
 	{
 		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35815,12 +35815,12 @@ func (s *TeamRepository) SetFake() {
 	}
 	{
 		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35850,7 +35850,7 @@ func (s *TeamRepository) SetFake() {
 	}
 	{
 		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35860,22 +35860,22 @@ func (s *TeamRepository) SetFake() {
 	}
 	{
 		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -35895,12 +35895,12 @@ func (s *TeamRepository) SetFake() {
 	}
 	{
 		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -36125,7 +36125,7 @@ func (s *TeamSimple) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -36155,12 +36155,12 @@ func (s *TeamSimple) SetFake() {
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.RepositoriesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.RepositoriesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -36807,7 +36807,7 @@ func (s *ThreadSubscription) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -37070,7 +37070,7 @@ func (s *UserSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -37080,37 +37080,37 @@ func (s *UserSearchResultItem) SetFake() {
 	}
 	{
 		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
 		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 		}
 	}
 	{
@@ -38249,7 +38249,7 @@ func (s *WebhookConfigSecret) SetFake() {
 func (s *WebhookConfigURL) SetFake() {
 	var unwrapped url.URL
 	{
-		unwrapped = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
+		unwrapped = url.URL{Scheme: "https", Host: "github.com", Path: "/grnsv/lcodegen"}
 	}
 	*s = WebhookConfigURL(unwrapped)
 }

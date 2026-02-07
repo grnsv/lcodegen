@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/validate"
+	"github.com/grnsv/lcodegen/validate"
 )
 
 func (s *IoK8sAPIAdmissionregistrationV1MutatingWebhook) Validate() error {

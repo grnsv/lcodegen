@@ -20,11 +20,11 @@ import (
 	"github.com/valyala/fasthttp"
 	"go.opentelemetry.io/otel/trace/noop"
 
-	"github.com/ogen-go/ogen/conv"
-	ht "github.com/ogen-go/ogen/http"
-	api "github.com/ogen-go/ogen/internal/integration/sample_api"
-	"github.com/ogen-go/ogen/internal/integration/techempower"
-	"github.com/ogen-go/ogen/json"
+	"github.com/grnsv/lcodegen/conv"
+	ht "github.com/grnsv/lcodegen/http"
+	api "github.com/grnsv/lcodegen/internal/integration/sample_api"
+	"github.com/grnsv/lcodegen/internal/integration/techempower"
+	"github.com/grnsv/lcodegen/json"
 )
 
 func newLocalListener() net.Listener {

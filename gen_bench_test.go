@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ogen-go/ogen"
-	"github.com/ogen-go/ogen/gen"
-	"github.com/ogen-go/ogen/gen/genfs"
+	ogen "github.com/grnsv/lcodegen"
+	"github.com/grnsv/lcodegen/gen"
+	"github.com/grnsv/lcodegen/gen/genfs"
 )
 
 func BenchmarkGenerator(b *testing.B) {

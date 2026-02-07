@@ -7,8 +7,8 @@ import (
 	"github.com/go-faster/errors"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ogen-go/ogen"
-	"github.com/ogen-go/ogen/location"
+	ogen "github.com/grnsv/lcodegen"
+	"github.com/grnsv/lcodegen/location"
 )
 
 func TestRemoteLocation(t *testing.T) {

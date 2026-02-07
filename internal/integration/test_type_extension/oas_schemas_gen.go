@@ -3,7 +3,7 @@
 package api
 
 import (
-	"github.com/ogen-go/ogen/_testdata/testtypes"
+	"github.com/grnsv/lcodegen/_testdata/testtypes"
 )
 
 type Alias testtypes.StringOgen

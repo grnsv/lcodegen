@@ -8,9 +8,9 @@ import (
 
 	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/_testdata/testtypes"
-	"github.com/ogen-go/ogen/json"
-	"github.com/ogen-go/ogen/validate"
+	"github.com/grnsv/lcodegen/_testdata/testtypes"
+	"github.com/grnsv/lcodegen/json"
+	"github.com/grnsv/lcodegen/validate"
 )
 
 // Encode encodes Alias as json.

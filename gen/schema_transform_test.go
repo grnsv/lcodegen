@@ -7,9 +7,9 @@ import (
 	"go.uber.org/zap"
 	"go.uber.org/zap/zaptest/observer"
 
-	"github.com/ogen-go/ogen/gen/ir"
-	"github.com/ogen-go/ogen/jsonpointer"
-	"github.com/ogen-go/ogen/jsonschema"
+	"github.com/grnsv/lcodegen/gen/ir"
+	"github.com/grnsv/lcodegen/jsonpointer"
+	"github.com/grnsv/lcodegen/jsonschema"
 )
 
 func TestSingleOneOf(t *testing.T) {

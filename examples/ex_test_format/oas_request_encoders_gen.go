@@ -12,8 +12,8 @@ import (
 
 	"github.com/go-faster/jx"
 	"github.com/google/uuid"
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/json"
+	ht "github.com/grnsv/lcodegen/http"
+	"github.com/grnsv/lcodegen/json"
 	"github.com/shopspring/decimal"
 )
 

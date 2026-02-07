@@ -3,7 +3,7 @@ package ir
 import (
 	"strings"
 
-	"github.com/ogen-go/ogen/openapi"
+	"github.com/grnsv/lcodegen/openapi"
 )
 
 // Servers is a list of servers.

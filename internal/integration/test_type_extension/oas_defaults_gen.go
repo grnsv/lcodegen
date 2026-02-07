@@ -4,8 +4,8 @@ package api
 
 import (
 	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/_testdata/testtypes"
-	"github.com/ogen-go/ogen/json"
+	"github.com/grnsv/lcodegen/_testdata/testtypes"
+	"github.com/grnsv/lcodegen/json"
 )
 
 // setDefaults set default value of fields.

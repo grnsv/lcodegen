@@ -1,4 +1,4 @@
-{{- /*gotype: github.com/ogen-go/ogen/gen.TemplateConfig*/ -}}
+{{- /*gotype: github.com/grnsv/lcodegen/gen.TemplateConfig*/ -}}
 {{ define "router" }}
 {{ template "header" $ }}
 {{- $router := $.Router }}
@@ -182,7 +182,7 @@ func (s *WebhookServer) Handler(webhookName string) http.Handler {
 {{ end }}
 
 {{ define "route_handle_request" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.RouteNode*/ -}}
+{{- /*gotype: github.com/grnsv/lcodegen/gen.RouteNode*/ -}}
 	switch r.Method {
 	{{- range $r := $.Routes }}
 	case {{ quote $r.Method }}:
@@ -199,7 +199,7 @@ func (s *WebhookServer) Handler(webhookName string) http.Handler {
 {{ end }}
 
 {{ define "route_edge" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.RouterElem*/ -}}
+{{- /*gotype: github.com/grnsv/lcodegen/gen.RouterElem*/ -}}
 {{- $r := $.Route }}
 {{- if $r.IsLeaf }}
 	if len(elem) == 0 {
@@ -270,7 +270,7 @@ func (s *WebhookServer) Handler(webhookName string) http.Handler {
 {{- end }}
 
 {{ define "return_found_edge" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.RouterElem*/ -}}
+{{- /*gotype: github.com/grnsv/lcodegen/gen.RouterElem*/ -}}
 {{- $r := $.Route -}}
 	switch method {
 	{{- range $route := $r.Routes }}
@@ -291,7 +291,7 @@ func (s *WebhookServer) Handler(webhookName string) http.Handler {
 {{- end }}
 
 {{ define "find_edge" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.RouterElem*/ -}}
+{{- /*gotype: github.com/grnsv/lcodegen/gen.RouterElem*/ -}}
 {{- $r := $.Route }}
 {{- if $r.IsLeaf }}
 	if len(elem) == 0 {

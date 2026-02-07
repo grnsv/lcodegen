@@ -1,5 +1,5 @@
 {{- define "uri/encoders_struct" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen/ir.Type*/ -}}
+{{- /*gotype: github.com/grnsv/lcodegen/gen/ir.Type*/ -}}
 {{- $fields := $.JSON.Fields }}
 {{- $additional := $.JSON.AdditionalProps }}
 {{- $pattern := $.JSON.PatternProps }}
@@ -183,4 +183,3 @@ func (s *{{ $.Name }}) DecodeURI(d uri.Decoder) error {
 }
 
 {{ end }}
-

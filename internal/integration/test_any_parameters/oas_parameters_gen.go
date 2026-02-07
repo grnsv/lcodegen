@@ -7,10 +7,10 @@ import (
 	"net/url"
 
 	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
-	"github.com/ogen-go/ogen/validate"
+	"github.com/grnsv/lcodegen/middleware"
+	"github.com/grnsv/lcodegen/ogenerrors"
+	"github.com/grnsv/lcodegen/uri"
+	"github.com/grnsv/lcodegen/validate"
 )
 
 // AnyArrayParamParams is parameters of anyArrayParam operation.

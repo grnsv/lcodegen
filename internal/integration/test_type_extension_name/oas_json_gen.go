@@ -8,10 +8,10 @@ import (
 
 	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
-	decimal3 "github.com/ogen-go/ogen/_testdata/testtypes/bar/decimal"
-	decimal2 "github.com/ogen-go/ogen/_testdata/testtypes/foo/decimal"
-	"github.com/ogen-go/ogen/json"
-	"github.com/ogen-go/ogen/validate"
+	decimal3 "github.com/grnsv/lcodegen/_testdata/testtypes/bar/decimal"
+	decimal2 "github.com/grnsv/lcodegen/_testdata/testtypes/foo/decimal"
+	"github.com/grnsv/lcodegen/json"
+	"github.com/grnsv/lcodegen/validate"
 )
 
 // Encode encodes decimal2.Decimal as json.

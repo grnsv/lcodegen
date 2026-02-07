@@ -5,10 +5,10 @@ import (
 
 	"github.com/go-faster/errors"
 
-	"github.com/ogen-go/ogen"
-	"github.com/ogen-go/ogen/jsonschema"
-	"github.com/ogen-go/ogen/location"
-	"github.com/ogen-go/ogen/openapi"
+	ogen "github.com/grnsv/lcodegen"
+	"github.com/grnsv/lcodegen/jsonschema"
+	"github.com/grnsv/lcodegen/location"
+	"github.com/grnsv/lcodegen/openapi"
 )
 
 var componentsKeyRegex = regexp.MustCompile(`^[a-zA-Z0-9.\-_]+$`)

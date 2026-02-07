@@ -10,8 +10,8 @@ import (
 	"github.com/go-faster/errors"
 	"github.com/stretchr/testify/require"
 
-	api "github.com/ogen-go/ogen/internal/integration/test_allof"
-	"github.com/ogen-go/ogen/validate"
+	api "github.com/grnsv/lcodegen/internal/integration/test_allof"
+	"github.com/grnsv/lcodegen/validate"
 )
 
 type allofTestServer struct {

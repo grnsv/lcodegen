@@ -9,12 +9,12 @@ import (
 	"github.com/go-faster/errors"
 	"golang.org/x/net/http/httpguts"
 
-	"github.com/ogen-go/ogen"
-	"github.com/ogen-go/ogen/internal/httpcookie"
-	"github.com/ogen-go/ogen/jsonpointer"
-	"github.com/ogen-go/ogen/jsonschema"
-	"github.com/ogen-go/ogen/location"
-	"github.com/ogen-go/ogen/openapi"
+	ogen "github.com/grnsv/lcodegen"
+	"github.com/grnsv/lcodegen/internal/httpcookie"
+	"github.com/grnsv/lcodegen/jsonpointer"
+	"github.com/grnsv/lcodegen/jsonschema"
+	"github.com/grnsv/lcodegen/location"
+	"github.com/grnsv/lcodegen/openapi"
 )
 
 func canonicalParamName(name string, in openapi.ParameterLocation) string {

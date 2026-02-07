@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/ogen-go/ogen/conv"
-	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
+	"github.com/grnsv/lcodegen/conv"
+	"github.com/grnsv/lcodegen/middleware"
+	"github.com/grnsv/lcodegen/ogenerrors"
+	"github.com/grnsv/lcodegen/uri"
 )
 
 // MarketCandlesGetParams is parameters of GET /market/candles operation.

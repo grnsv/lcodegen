@@ -9,8 +9,8 @@ import (
 
 	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/ogenregex"
-	"github.com/ogen-go/ogen/validate"
+	"github.com/grnsv/lcodegen/ogenregex"
+	"github.com/grnsv/lcodegen/validate"
 )
 
 var regexMap = map[string]ogenregex.Regexp{

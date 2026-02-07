@@ -126,7 +126,7 @@ formatters:
   settings:
     goimports:
       local-prefixes:
-        - github.com/ogen-go/ogen
+        - github.com/grnsv/lcodegen
   exclusions:
     generated: lax
     paths:
