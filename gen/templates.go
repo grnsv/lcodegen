@@ -3,12 +3,14 @@ package gen
 import (
 	"embed"
 	"fmt"
+	"slices"
 	"strconv"
 	"strings"
 	"sync"
 	"text/template"
 
 	"github.com/go-faster/errors"
+	"golang.org/x/exp/maps"
 
 	"github.com/grnsv/lcodegen/gen/ir"
 	"github.com/grnsv/lcodegen/internal/naming"
@@ -79,6 +81,14 @@ func templateFunctions() template.FuncMap {
 		"camelSpecial":  camelSpecial,
 		"capitalize":    naming.Capitalize,
 		"upper":         strings.ToUpper,
+		"lower":         strings.ToLower,
+		"snakeCase":     snakeCase,
+		"default": func(def, val any) any {
+			if val == nil || val == "" {
+				return def
+			}
+			return val
+		},
 
 		// Helpers for recursive encoding and decoding.
 		"elem": func(t *ir.Type, v string) Elem {
@@ -178,6 +188,7 @@ func templateFunctions() template.FuncMap {
 			}
 		},
 		"print_go": ir.PrintGoValue,
+		"print_php": ir.PrintPhpValue,
 		// We use any to prevent template type matching errors
 		// for type aliases (e.g. for quoting ir.ContentType).
 		"quote": func(v any) string {
@@ -212,6 +223,22 @@ func templateFunctions() template.FuncMap {
 		"dedupeVariantsByType":             dedupeVariantsByType,
 		"needsArrayElementDiscrimination":  needsArrayElementDiscrimination,
 		"dedupeVariantsByArrayElementType": dedupeVariantsByArrayElementType,
+		"dedupeSumTypes":                   dedupeSumTypes,
+		"isOptionalField":                  isOptionalField,
+		"isInlineField":                    isInlineField,
+		"isDeprecatedField":                isDeprecatedField,
+
+		"array_rule_elem": func(prefix string, t *ir.Type) struct {
+			Prefix string
+			Type   *ir.Type
+		} {
+			return struct {
+				Prefix string
+				Type   *ir.Type
+			}{Prefix: prefix, Type: t}
+		},
+
+		"responseContentType": responseContentType,
 	}
 }
 
@@ -366,4 +393,56 @@ func dedupeVariantsByArrayElementType(variants []ir.UniqueFieldVariant) []ir.Uni
 	}
 
 	return result
+}
+
+// dedupeSumTypes deduplicates sum type variants by their PHP type representation.
+// Prevents rendering e.g. "array|array" when both KindArray and KindMap are in the sum.
+func dedupeSumTypes(types []*ir.Type) []*ir.Type {
+	seen := make(map[string]bool)
+	result := make([]*ir.Type, 0, len(types))
+	for _, t := range types {
+		key := phpTypeKey(t)
+		if !seen[key] {
+			seen[key] = true
+			result = append(result, t)
+		}
+	}
+	return result
+}
+
+func phpTypeKey(t *ir.Type) string {
+	switch {
+	case t.IsArray(), t.IsMap():
+		return "array"
+	case t.IsAlias():
+		return phpTypeKey(t.AliasTo)
+	case t.IsPrimitive():
+		return t.Primitive.String()
+	default:
+		return t.Name
+	}
+}
+
+func isOptionalField(f *ir.Field) bool {
+	t := f.Type
+	return (t.IsPointer() && t.NilSemantic.Optional()) ||
+		(t.IsGeneric() && t.GenericVariant.Optional)
+}
+
+func isInlineField(f *ir.Field) bool {
+	return f.Inline != ir.InlineNone
+}
+
+func isDeprecatedField(f *ir.Field) bool {
+	return f.Spec != nil && f.Spec.Schema != nil && f.Spec.Schema.Deprecated
+}
+
+// responseContentType returns the first type from the response contents.
+func responseContentType(r *ir.Response) *ir.Type {
+	if r == nil || len(r.Contents) == 0 {
+		return nil
+	}
+	keys := maps.Keys(r.Contents)
+	slices.Sort(keys)
+	return r.Contents[keys[0]].Type
 }

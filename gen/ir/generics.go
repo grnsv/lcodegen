@@ -37,10 +37,6 @@ func (v GenericVariant) Any() bool {
 // CanGeneric reports whether Type can be boxed to KindGeneric.
 func (t Type) CanGeneric() bool {
 	switch t.Kind {
-	case KindStruct:
-		if len(t.Fields) == 0 {
-			return false
-		}
 	case KindAlias:
 		return t.AliasTo.CanGeneric()
 	case KindSum:

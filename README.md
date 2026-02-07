@@ -1,522 +1,346 @@
-# lcodegen [![Go Reference](https://img.shields.io/badge/go-pkg-00ADD8)](https://pkg.go.dev/github.com/grnsv/lcodegen#section-documentation) [![codecov](https://img.shields.io/codecov/c/github/grnsv/lcodegen?label=cover)](https://codecov.io/gh/grnsv/lcodegen) [![stable](https://img.shields.io/badge/-stable-brightgreen)](https://go-faster.org/docs/projects/status#stable)
+# lcodegen [![Go Reference](https://img.shields.io/badge/go-pkg-00ADD8)](https://pkg.go.dev/github.com/grnsv/lcodegen#section-documentation) [![codecov](https://img.shields.io/codecov/c/github/grnsv/lcodegen?label=cover)](https://codecov.io/gh/grnsv/lcodegen)
 
-OpenAPI v3 Code Generator for Go.
+OpenAPI v3 Code Generator for Laravel.
+
+Generates routes, controllers, form requests, response classes, and DTOs from an OpenAPI v3 specification. Built as a fork of [ogen-go/ogen](https://github.com/ogen-go/ogen) — reuses the battle-tested OpenAPI parsing and IR pipeline, replacing the output layer with Laravel/PHP templates.
 
 # Install
 
-```console
-go install -v github.com/grnsv/lcodegen/cmd/ogen@latest
+```bash
+go install github.com/grnsv/lcodegen/cmd/lcodegen@latest
+```
+
+Or via the [l-codegen](https://github.com/grnsv/l-codegen) Composer package:
+
+```bash
+composer require --dev grnsv/l-codegen
+php artisan l-codegen:install
 ```
 
 # Usage
 
-```go
-//go:generate go run github.com/grnsv/lcodegen/cmd/ogen --target target/dir -package api --clean schema.json
+Run from your Laravel project root:
+
+```bash
+vendor/bin/lcodegen openapi.yml
 ```
 
-or using container:
-```shell
-docker run --rm \
-  --volume ".:/workspace" \
-  ghcr.io/grnsv/lcodegen:latest --target workspace/petstore --clean workspace/petstore.yml
+Use `--target` to specify the Laravel project directory:
+
+```bash
+vendor/bin/lcodegen --target ./my-laravel-app openapi.yml
 ```
 
 # Features
 
-- No reflection or `interface{}`
-  - The json encoding is code-generated, optimized and uses [go-faster/jx](https://github.com/go-faster/jx) for speed and overcoming `encoding/json` limitations
-  - Validation is code-generated according to spec
-- Code-generated static radix router
-- No more boilerplate
-  - Structures are generated from OpenAPI v3 specification
-  - Arguments, headers, url queries are parsed according to specification into structures
-  - String formats like `uuid`, `date`, `date-time`, `uri` are represented by go types directly
-- Statically typed client and server
-- Convenient support for optional, nullable and optional nullable fields
-  - No more pointers
-  - Generated Optional[T], Nullable[T] or OptionalNullable[T] wrappers with helpers
-  - Special case for array handling with `nil` semantics relevant to specification
-    - When array is optional, `nil` denotes absence of value
-    - When nullable, `nil` denotes that value is `nil`
-    - When required, `nil` currently the same as `[]`, but is actually invalid
-    - If both nullable and required, wrapper will be generated (TODO)
-- Support for untyped parameters (any)
-  - Parameters with no `type` specified in schema are represented as Go `any`
-  - Decoded as strings from URI (path, query, header, cookie)
-  - Client encoding uses `fmt.Sprint` for flexible value conversion
-  - Useful for legacy APIs or dynamic parameter types
-- Generated sum types for oneOf
-  - Primitive types (`string`, `number`) are detected by type
-  - Discriminator field is used if defined in schema
-  - Type is inferred by unique fields if possible
-    - Field name discrimination: variants with different field names
-    - Field type discrimination: variants with same field names but different types (e.g., `{id: string}` vs `{id: integer}`)
-    - Field value discrimination: variants with same field names and types but different enum values
-- Extra Go struct field tags in the generated types
-- OpenTelemetry tracing and metrics
+- **Full Laravel integration** — generates idiomatic Laravel code: routes, controllers, Form Requests, Responsable responses, DTOs
+- **Two-class pattern** — base classes (always regenerated) + user classes (created once, never overwritten), so re-generation doesn't destroy your code
+- **Validation from spec** — OpenAPI constraints (`required`, `minLength`, `maxLength`, `pattern`, `minimum`, `maximum`, `enum`, `format`) become Laravel validation rules automatically
+- **Typed DTOs** — `readonly` classes with `JsonSerializable`, `fromArray()` factory, proper optional field handling
+- **Optional wrappers** — `OptString`, `OptInt`, etc. to distinguish "not set" from `null`
+- **Operation grouping** — operations grouped into controllers via `x-ogen-operation-group` or path-based inference
+- **OpenAPI extensions** — `x-ogen-name`, `x-ogen-operation-group`, `x-ogen-properties` for fine-grained control
 
-Example generated structure from schema:
+# Generated output
 
-```go
-// Pet describes #/components/schemas/Pet.
-type Pet struct {
-	Birthday     time.Time     `json:"birthday"`
-	Friends      []Pet         `json:"friends"`
-	ID           int64         `json:"id"`
-	IP           net.IP        `json:"ip"`
-	IPV4         net.IP        `json:"ip_v4"`
-	IPV6         net.IP        `json:"ip_v6"`
-	Kind         PetKind       `json:"kind"`
-	Name         string        `json:"name"`
-	Next         OptData       `json:"next"`
-	Nickname     NilString     `json:"nickname"`
-	NullStr      OptNilString  `json:"nullStr"`
-	Rate         time.Duration `json:"rate"`
-	Tag          OptUUID       `json:"tag"`
-	TestArray1   [][]string    `json:"testArray1"`
-	TestDate     OptTime       `json:"testDate"`
-	TestDateTime OptTime       `json:"testDateTime"`
-	TestDuration OptDuration   `json:"testDuration"`
-	TestFloat1   OptFloat64    `json:"testFloat1"`
-	TestInteger1 OptInt        `json:"testInteger1"`
-	TestTime     OptTime       `json:"testTime"`
-	Type         OptPetType    `json:"type"`
-	URI          url.URL       `json:"uri"`
-	UniqueID     uuid.UUID     `json:"unique_id"`
-}
+Given the [Petstore Expanded](https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore-expanded.yaml) spec, lcodegen produces:
+
+```
+routes/openapi.php                                 # API routes
+app/Http/Controllers/OpenApi/PetController.php      # Base controller (abstract)
+app/Http/Controllers/PetController.php              # User controller (your code here)
+app/Http/Requests/OpenApi/AddPetRequest.php         # Base form request with validation
+app/Http/Requests/AddPetRequest.php                 # User form request
+app/Http/Responses/OpenApi/AddPetResponse.php       # Response class
+app/Http/Responses/OpenApi/ErrorResponse.php        # Error response
+app/Http/Dto/OpenApi/Pet.php                        # DTO
+app/Http/Dto/OpenApi/NewPet.php                     # DTO
+app/Http/Dto/OpenApi/OptString.php                  # Optional wrapper
+...
 ```
 
-Example generated server interface:
+## Routes
 
-```go
-// Server handles operations described by OpenAPI v3 specification.
-type Server interface {
-	PetGetByName(ctx context.Context, params PetGetByNameParams) (Pet, error)
-	// ...
-}
+```php
+<?php
+// Code generated by lcodegen, DO NOT EDIT.
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PetController;
+
+// Pet routes
+Route::post('/pets', [PetController::class, 'addPet'])
+    ->name('pet.add_pet');
+Route::delete('/pets/{id}', [PetController::class, 'deletePet'])
+    ->name('pet.delete_pet');
+Route::get('/pets/{id}', [PetController::class, 'findPetById'])
+    ->name('pet.find_pet_by_id');
+Route::get('/pets', [PetController::class, 'findPets'])
+    ->name('pet.find_pets');
 ```
 
-Example generated client method signature:
+## Base controller
 
-```go
-type PetGetByNameParams struct {
-    Name string
-}
+```php
+<?php
+// Code generated by lcodegen, DO NOT EDIT.
 
-// GET /pet/{name}
-func (c *Client) PetGetByName(ctx context.Context, params PetGetByNameParams) (res Pet, err error)
-```
+namespace App\Http\Controllers\OpenApi;
 
-## Generics
+use App\Http\Controllers\Controller;
+use App\Http\Requests\AddPetRequest;
+use App\Http\Requests\FindPetsRequest;
+use App\Http\Responses\OpenApi\AddPetResponse;
+use App\Http\Responses\OpenApi\DeletePetResponse;
+use App\Http\Responses\OpenApi\FindPetByIdResponse;
+use App\Http\Responses\OpenApi\FindPetsResponse;
+use App\Http\Responses\OpenApi\ErrorResponse;
 
-Instead of using pointers, `ogen` generates generic wrappers.
-
-For example, `OptNilString` is `string` that is optional (no value) and can be `null`.
-
-```go
-// OptNilString is optional nullable string.
-type OptNilString struct {
-	Value string
-	Set   bool
-	Null  bool
-}
-```
-
-Multiple convenience helper methods and functions are generated, some of them:
-
-```go
-func (OptNilString) Get() (v string, ok bool)
-func (OptNilString) IsNull() bool
-func (OptNilString) IsSet() bool
-
-func NewOptNilString(v string) OptNilString
-```
-
-## Recursive types
-
-If `ogen` encounters recursive types that can't be expressed in go, pointers are used as fallback.
-
-## Sum types
-
-For `oneOf` sum-types are generated. `ID` that is one of `[string, integer]` will be represented like that:
-
-```go
-type ID struct {
-	Type   IDType
-	String string
-	Int    int
-}
-
-// Also, some helpers:
-func NewStringID(v string) ID
-func NewIntID(v int) ID
-```
-
-### Discriminator Inference
-
-ogen automatically infers how to discriminate between oneOf variants using several strategies:
-
-**1. Type-based discrimination** (for primitive types)
-
-Variants with different JSON types are discriminated by checking the JSON type at runtime:
-
-```json
+abstract class PetController extends Controller
 {
-  "oneOf": [
-    {"type": "string"},
-    {"type": "integer"}
-  ]
+    /** POST /pets — Creates a new pet in the store. */
+    abstract public function addPet(
+        AddPetRequest $request,
+    ): AddPetResponse|ErrorResponse;
+
+    /** DELETE /pets/{id} — Deletes a single pet based on the ID supplied. */
+    abstract public function deletePet(
+        int $id,
+    ): DeletePetResponse|ErrorResponse;
+
+    /** GET /pets/{id} */
+    abstract public function findPetById(
+        int $id,
+    ): FindPetByIdResponse|ErrorResponse;
+
+    /** GET /pets — Returns all pets from the system. */
+    abstract public function findPets(
+        FindPetsRequest $request,
+    ): FindPetsResponse|ErrorResponse;
 }
 ```
 
-**2. Explicit discriminator** (when discriminator field is specified)
+## User controller
 
-When a discriminator field is defined in the schema, ogen uses it directly:
+Created once, never overwritten — this is where your business logic goes:
 
-```json
+```php
+<?php
+// This file can be edited. It will not be overwritten by the generator.
+
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\OpenApi\PetController as BasePetController;
+use App\Http\Requests\AddPetRequest;
+use App\Http\Responses\OpenApi\AddPetResponse;
+use App\Http\Responses\OpenApi\ErrorResponse;
+
+final class PetController extends BasePetController
 {
-  "oneOf": [...],
-  "discriminator": {
-    "propertyName": "type",
-    "mapping": {"user": "#/components/schemas/User", ...}
-  }
-}
-```
-
-**3. Field-based discrimination** (automatic inference from unique fields)
-
-ogen analyzes the fields in each variant to find discriminating characteristics:
-
-- **Field name discrimination**: Variants have different field names
-
-```json
-{
-  "oneOf": [
-    {"type": "object", "required": ["userId"], "properties": {"userId": {"type": "string"}}},
-    {"type": "object", "required": ["orderId"], "properties": {"orderId": {"type": "string"}}}
-  ]
-}
-```
-
-- **Field type discrimination**: Variants have fields with the same name but different types
-
-```json
-{
-  "oneOf": [
+    public function addPet(
+        AddPetRequest $request,
+    ): AddPetResponse|ErrorResponse
     {
-      "type": "object",
-      "required": ["id", "value"],
-      "properties": {
-        "id": {"type": "string"},
-        "value": {"type": "string"}
-      }
-    },
-    {
-      "type": "object",
-      "required": ["id", "value"],
-      "properties": {
-        "id": {"type": "integer"},
-        "value": {"type": "number"}
-      }
+        // TODO: Implement AddPet
+        throw new \BadMethodCallException('Not implemented');
     }
-  ]
+
+    // ...
 }
 ```
 
-In this case, ogen checks the JSON type of the `id` field at runtime to determine which variant to decode.
+## Form request with validation
 
-- **Field value discrimination**: Variants have fields with the same name and type but different enum values
+```php
+<?php
+// Code generated by lcodegen, DO NOT EDIT.
 
-```json
+namespace App\Http\Requests\OpenApi;
+
+use App\Http\Dto\OpenApi\NewPet;
+use Illuminate\Foundation\Http\FormRequest;
+
+abstract class AddPetRequest extends FormRequest
 {
-  "oneOf": [
+    public function rules(): array
     {
-      "type": "object",
-      "required": ["status"],
-      "properties": {
-        "status": {"type": "string", "enum": ["active", "pending"]}
-      }
-    },
-    {
-      "type": "object",
-      "required": ["status"],
-      "properties": {
-        "status": {"type": "string", "enum": ["inactive", "deleted"]}
-      }
+        return [
+            'name' => ['required', 'string'],
+            'tag' => ['sometimes', 'string'],
+        ];
     }
-  ]
-}
-```
 
-In this case, ogen checks the actual string value of the `status` field at runtime and matches it against each variant's enum values. The enum values must be disjoint (non-overlapping) for this to work. If enum values overlap, ogen will report an error and suggest using an explicit discriminator.
-
-## Extension properties
-
-OpenAPI enables [Specification Extensions](https://spec.openapis.org/oas/v3.1.0#specification-extensions),
-which are implemented as patterned fields that are always prefixed by `x-`.
-
-### Server name
-
-Optionally, server name can be specified by `x-ogen-server-name`, for example:
-
-```json
-{
-  "openapi": "3.0.3",
-  "servers": [
+    public function validated($key = null, $default = null): mixed
     {
-      "x-ogen-server-name": "production",
-      "url": "https://{region}.example.com/{val}/v1",
-    },
-    {
-      "x-ogen-server-name": "prefix",
-      "url": "/{val}/v1",
-    },
-    {
-      "x-ogen-server-name": "const",
-      "url": "https://cdn.example.com/v1"
-    }
-  ],
-(...)
-```
-
-### Custom type name
-
-Optionally, type name can be specified by `x-ogen-name`, for example:
-
-```json
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "x-ogen-name": "Name",
-  "properties": {
-    "foobar": {
-      "$ref": "#/$defs/FooBar"
-    }
-  },
-  "$defs": {
-    "FooBar": {
-      "x-ogen-name": "FooBar",
-      "type": "object",
-      "properties": {
-        "foo": {
-          "type": "string"
+        $validated = parent::validated($key, $default);
+        if ($key === null) {
+            return NewPet::fromArray($validated);
         }
-      }
+
+        return $validated;
     }
-  }
 }
 ```
 
-### Custom field name
+## DTO
 
-Optionally, type name can be specified by `x-ogen-properties`, for example:
+```php
+<?php
+// Code generated by lcodegen, DO NOT EDIT.
 
-```yaml
-components:
-  schemas:
-    Node:
-      type: object
-      properties:
-        parent:
-          $ref: "#/components/schemas/Node"
-        child:
-          $ref: "#/components/schemas/Node"
-      x-ogen-properties:
-        parent:
-          name: "Prev"
-        child:
-          name: "Next"
-```
+namespace App\Http\Dto\OpenApi;
 
-The generated source code looks like:
+use JsonSerializable;
 
-```go
-// Ref: #/components/schemas/Node
-type Node struct {
-    Prev *Node `json:"parent"`
-    Next *Node `json:"child"`
+final readonly class Pet implements JsonSerializable
+{
+    public function __construct(
+        public string $name,
+        public OptString $tag,
+        public int $id,
+    ) {}
+
+    public function jsonSerialize(): array
+    {
+        $result = [];
+        $result['name'] = $this->name;
+        if ($this->tag->set) {
+            $result['tag'] = $this->tag->value;
+        }
+        $result['id'] = $this->id;
+
+        return $result;
+    }
+
+    public static function fromArray(array $data): self
+    {
+        return new self(
+            name: $data['name'],
+            tag: \array_key_exists('tag', $data)
+                ? OptString::some($data['tag'])
+                : OptString::none(),
+            id: $data['id'],
+        );
+    }
 }
 ```
 
-### Extra struct field tags
+## Response
 
-Optionally, additional Go struct field tags can be specified by `x-oapi-codegen-extra-tags`, for example:
+```php
+<?php
+// Code generated by lcodegen, DO NOT EDIT.
 
-```yaml
-components:
-  schemas:
-    Pet:
-      type: object
-      required:
-        - id
-      properties:
-        id:
-          type: integer
-          format: int64
-          x-oapi-codegen-extra-tags:
-            gorm: primaryKey
-            valid: customIdValidator
-```
+namespace App\Http\Responses\OpenApi;
 
-The generated source code looks like:
+use Illuminate\Contracts\Support\Responsable;
+use Illuminate\Http\JsonResponse;
+use App\Http\Dto\OpenApi as Dto;
 
-```go
-// Ref: #/components/schemas/Pet
-type Pet struct {
-    ID   int64     `gorm:"primaryKey" valid:"customNameValidator" json:"id"`
+final readonly class AddPetResponse implements Responsable
+{
+    private const HTTP_STATUS = 200;
+
+    public function __construct(
+        private Dto\Pet $data,
+    ) {}
+
+    public function toResponse($request): JsonResponse
+    {
+        return response()->json($this->data, self::HTTP_STATUS);
+    }
 }
 ```
 
-### Streaming JSON encoding
+## Optional wrapper
 
-By default, ogen loads the entire JSON body into memory before decoding it.
-Optionally, streaming JSON encoding can be enabled by `x-ogen-json-streaming`, for example:
+```php
+<?php
+// Code generated by lcodegen, DO NOT EDIT.
+
+namespace App\Http\Dto\OpenApi;
+
+final readonly class OptString
+{
+    public function __construct(
+        public ?string $value,
+        public bool $set,
+    ) {}
+
+    public static function none(): self
+    {
+        return new self(null, false);
+    }
+
+    public static function some(string $value): self
+    {
+        return new self($value, true);
+    }
+}
+```
+
+# Two-class pattern
+
+The generator separates generated code from user code:
+
+| Layer | Base class (`OpenApi/` subdir) | User class (parent dir) |
+|-------|-------------------------------|------------------------|
+| Controllers | Abstract, defines method signatures | `final`, extends base, contains your logic |
+| Form Requests | Validation rules from spec, `validated()` returns typed DTO | Authorization, custom rules |
+
+Base classes are **always regenerated** from the spec. User classes are **created once** and never overwritten — safe to edit.
+
+# Configuration
+
+Config file (`ogen.yml`, `ogen.yaml`, `.ogen.yml`, `.ogen.yaml`):
 
 ```yaml
-requestBody:
-  required: true
-  content:
-    application/json:
-      x-ogen-json-streaming: true
-      schema:
-        type: array
-        items:
-          type: number
+generator:
+  ignore_not_implemented: ["all"]
+parser:
+  infer_types: true
+  allow_remote: true
 ```
 
-### Custom validation
+# OpenAPI extensions
 
-Optionally, custom validation can be specified by `x-ogen-validate`, for example:
+| Extension | Scope | Description |
+|-----------|-------|-------------|
+| `x-ogen-operation-group` | path / operation | Group operations into controllers |
+| `x-ogen-name` | schema | Custom type name |
+| `x-ogen-properties` | schema | Custom field names |
+| `x-ogen-server-name` | server | Custom server name |
 
-```yaml
-components:
-  schemas:
-    Product:
-      type: object
-      properties:
-        name:
-          type: string
-          x-ogen-validate:
-            minWords: 2
-        tags:
-          type: array
-          items:
-            type: string
-          x-ogen-validate:
-            uniqueItems: true
-        metadata:
-          type: object
-          additionalProperties: true
-          x-ogen-validate:
-            fieldCount:
-              min: 1
-              max: 10
-```
-
-Custom validators must be registered before validation is performed:
-
-```go
-import "github.com/grnsv/lcodegen/validate"
-
-// Register validators
-validate.RegisterValidator("minWords", func(value any, params any) error {
-    // ... validate minimum word count
-})
-
-validate.RegisterValidator("uniqueItems", func(value any, params any) error {
-    // ... validate array has no duplicate items
-})
-
-validate.RegisterValidator("fieldCount", func(value any, params any) error {
-    // ... validate object field count within min/max range
-})
-```
-
-### Operation groups
-
-Optionally, operations can be grouped so a handler interface will be generated for each group of operations.
-This is useful for organizing operations for large APIs.
-
-The group for operations on a path or individual operations can be specified by `x-ogen-operation-group`, for example:
+Example — grouping operations into controllers:
 
 ```yaml
 paths:
-  /images:
-    x-ogen-operation-group: Images
+  /pets:
+    x-ogen-operation-group: Pet
     get:
-      operationId: listImages
-      ...
-  /images/{imageID}:
-    x-ogen-operation-group: Images
-    get:
-      operationId: getImageByID
-      ...
+      operationId: findPets
+    post:
+      operationId: addPet
   /users:
-    x-ogen-operation-group: Users
+    x-ogen-operation-group: User
     get:
       operationId: listUsers
-      ...
 ```
 
-The generated handler interfaces look like this:
+This generates `PetController` and `UserController` instead of a single controller.
 
-```go
-// x-ogen-operation-group: Images
-type ImagesHandler interface {
-    ListImages(ctx context.Context, req *ListImagesRequest) (*ListImagesResponse, error)
-    GetImageByID(ctx context.Context, req *GetImagesByIDRequest) (*GetImagesByIDResponse, error)
-}
+# Architecture
 
-// x-ogen-operation-group: Users
-type UsersHandler interface {
-    ListUsers(ctx context.Context, req *ListUsersRequest) (*ListUsersResponse, error)
-}
-
-type Handler interface {
-    ImagesHandler
-    UsersHandler
-    // All un-grouped operations will be on this interface
-}
+```
+OpenAPI YAML/JSON
+  → ogen.Parse()           # Parse & validate spec, resolve $ref
+  → gen.NewGenerator()     # Build IR
+  → g.WriteSource()        # Render PHP via Go text/template
+  → Laravel PHP files
 ```
 
-## JSON
+The [intermediate representation](gen/ir/) drives code generation. PHP/Laravel specifics live in [templates](gen/_template/) and supporting generator code.
 
-Code generation provides very efficient and flexible encoding and decoding of json:
+# License
 
-```go
-// Decode decodes Error from json.
-func (s *Error) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Error to nil")
-	}
-	return d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "code":
-			if err := func() error {
-				v, err := d.Int64()
-				s.Code = int64(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"code\"")
-			}
-		case "message":
-			if err := func() error {
-				v, err := d.Str()
-				s.Message = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"message\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	})
-}
-```
+[Apache-2.0](LICENSE)

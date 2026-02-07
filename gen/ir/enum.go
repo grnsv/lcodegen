@@ -5,6 +5,7 @@ type EnumVariant struct {
 	Value any
 }
 
-func (v *EnumVariant) ValueGo() string {
-	return PrintGoValue(v.Value)
+// ValuePhp returns the PHP representation of the enum variant value.
+func (v *EnumVariant) ValuePhp() string {
+	return PrintPhpValue(v.Value)
 }

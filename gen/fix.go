@@ -185,6 +185,7 @@ func cloneResponse(r *ir.Responses) *ir.Responses {
 		return &ir.Response{
 			NoContent:      r.NoContent,
 			Contents:       maps.Clone(r.Contents),
+			Spec:           r.Spec,
 			Headers:        r.Headers,
 			WithStatusCode: r.WithStatusCode,
 			WithHeaders:    r.WithHeaders,

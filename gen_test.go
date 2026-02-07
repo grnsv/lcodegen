@@ -79,7 +79,7 @@ func testGenerate(t *testing.T, dir, filename string, data []byte, aliases ctAli
 
 		g, err := gen.NewGenerator(spec, opt)
 		require.NoError(t, err)
-		require.NoError(t, g.WriteSource(genfs.CheckFS{}, "api"))
+		require.NoError(t, g.WriteSource(genfs.CheckFS{}, "api", gen.LaravelPaths{}))
 
 		if len(opt.Generator.IgnoreNotImplemented) > 0 {
 			// Check that all ignore rules are necessary.
@@ -252,7 +252,7 @@ paths:
 	a.True(foundPost, "POST operation not found")
 
 	// Also verify that we can write the generated files without error
-	err = g.WriteSource(genfs.CheckFS{}, "api")
+	err = g.WriteSource(genfs.CheckFS{}, "api", gen.LaravelPaths{})
 	a.NoError(err)
 }
 

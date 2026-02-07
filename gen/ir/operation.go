@@ -27,11 +27,36 @@ type Operation struct {
 	Security       SecurityRequirements
 	Spec           *openapi.Operation
 	OperationGroup string
+	Laravel        *LaravelMeta // Precomputed Laravel generation data.
 }
 
 type OperationGroup struct {
-	Name       string
-	Operations []*Operation
+	Name             string
+	Operations       []*Operation
+	HasErrorResponse bool
+	Laravel          *LaravelGroupMeta // Precomputed Laravel generation data.
+}
+
+// LaravelMeta holds precomputed Laravel-specific data for an operation.
+type LaravelMeta struct {
+	NeedsRequest       bool   // needs FormRequest
+	HasRequestBody     bool   // op.Request != nil
+	NeedsParamsDto     bool   // needs separate Params DTO (query/header params)
+	HasDefaults        bool   // has default values in params/body
+	HasValidatedDto    bool   // has meaningful DTO for validated()
+	ValidatedTypeName  string // DTO class name for validated()
+	ResponseClassName  string // "AddPetResponse" or ""
+	SuccessStatusCode  int    // HTTP status code of success response (200 by default)
+	SuccessType        *Type  // unwrapped type of success response
+	SuccessItemType    *Type  // item type for arrays, type itself otherwise
+	SuccessWrapperType *Type  // wrapper type (headers/StatusCode) or nil
+	SuccessDescription string // description from spec
+	HasNoContent       bool   // 204-like response without body
+}
+
+// LaravelGroupMeta holds precomputed Laravel-specific data for an operation group.
+type LaravelGroupMeta struct {
+	ResponseClasses []string // deduplicated response class names
 }
 
 // OTELAttribute represents OpenTelemetry attribute defined by otelogen package.

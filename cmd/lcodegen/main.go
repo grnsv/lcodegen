@@ -34,10 +34,7 @@ func cleanDir(targetDir string, files []os.DirEntry) (rerr error) {
 			continue
 		}
 		name := f.Name()
-		if !strings.HasSuffix(name, "_gen.go") && !strings.HasSuffix(name, "_gen_test.go") {
-			continue
-		}
-		if !strings.HasPrefix(name, "openapi") && !strings.HasPrefix(name, "oas") {
+		if !strings.HasSuffix(name, ".php") {
 			continue
 		}
 		// Do not return error if file does not exist.
@@ -71,30 +68,48 @@ func generate(data []byte, packageName, targetDir string, clean bool, opts gen.O
 	}
 	log.Debug("Build IR", zap.Duration("took", time.Since(start)))
 
-	// Clean target dir only after flag parsing, spec parsing and IR building.
-	switch files, err := os.ReadDir(targetDir); {
-	case os.IsNotExist(err):
-		if err := os.MkdirAll(targetDir, 0o750); err != nil {
+	laravelPaths := gen.LaravelPaths{
+		RoutesFile:      filepath.Join(targetDir, "routes", "openapi.php"),
+		UserControllers: filepath.Join(targetDir, "app", "Http", "Controllers"),
+		UserRequests:    filepath.Join(targetDir, "app", "Http", "Requests"),
+		Controllers:     filepath.Join(targetDir, "app", "Http", "Controllers", "OpenApi"),
+		Requests:        filepath.Join(targetDir, "app", "Http", "Requests", "OpenApi"),
+		Responses:       filepath.Join(targetDir, "app", "Http", "Responses", "OpenApi"),
+		Dto:             filepath.Join(targetDir, "app", "Http", "Dto", "OpenApi"),
+	}
+
+	// Create and clean base directories
+	for _, targetDir := range [4]string{
+		laravelPaths.Controllers,
+		laravelPaths.Requests,
+		laravelPaths.Responses,
+		laravelPaths.Dto,
+	} {
+		switch files, err := os.ReadDir(targetDir); {
+		case os.IsNotExist(err):
+			if err := os.MkdirAll(targetDir, 0o750); err != nil {
+				return err
+			}
+		case err != nil:
 			return err
-		}
-	case err != nil:
-		return err
-	default:
-		if clean {
+		default:
 			if err := cleanDir(targetDir, files); err != nil {
 				return errors.Wrap(err, "clean")
 			}
 		}
 	}
 
-	fs := genfs.FormattedSource{
-		// FIXME(tdakkota): write source uses imports.Process which also uses go/format.
-		// 	So, there is no reason to format source twice or provide a flag to disable formatting.
-		Format: false,
-		Root:   targetDir,
+	// Ensure routes directory exists (don't clean it - may contain user files)
+	if err := os.MkdirAll(filepath.Dir(laravelPaths.RoutesFile), 0o750); err != nil {
+		return errors.Wrap(err, "create routes directory")
 	}
+	if err := os.Remove(laravelPaths.RoutesFile); err != nil && !os.IsNotExist(err) {
+		return errors.Wrap(err, "remove route file")
+	}
+
+	fs := genfs.FormattedSource{}
 	start = time.Now()
-	if err := g.WriteSource(fs, packageName); err != nil {
+	if err := g.WriteSource(fs, packageName, laravelPaths); err != nil {
 		return errors.Wrap(err, "write")
 	}
 	log.Debug("Write", zap.Duration("took", time.Since(start)))
@@ -284,7 +299,7 @@ func run() error {
 		cfgPath = set.String("config", "", "Path to config file")
 
 		// Generator options.
-		targetDir   = set.String("target", "api", "Path to target dir")
+		targetDir   = set.String("target", ".", "Path to target dir")
 		packageName = set.String("package", "api", "Target package name")
 		clean       = set.Bool("clean", false, "Clean generated files before generation")
 

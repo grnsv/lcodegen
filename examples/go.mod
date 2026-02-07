@@ -1,8 +1,6 @@
 module github.com/grnsv/lcodegen/examples
 
-go 1.24.0
-
-toolchain go1.24.7
+go 1.25.4
 
 require (
 	github.com/go-faster/errors v0.7.1

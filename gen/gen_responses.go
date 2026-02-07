@@ -281,6 +281,7 @@ func (g *Generator) responseToIR(
 			t.Fields = append(t.Fields, &ir.Field{
 				Name: "StatusCode",
 				Type: ir.Primitive(ir.Int, nil),
+				Tag:  ir.Tag{JSON: "statusCode"},
 			})
 		}
 
@@ -433,6 +434,7 @@ func wrapResponseType(
 		wrapper.Fields = append(wrapper.Fields, &ir.Field{
 			Name: "StatusCode",
 			Type: ir.Primitive(ir.Int, nil),
+			Tag:  ir.Tag{JSON: "statusCode"},
 		})
 	}
 
@@ -440,6 +442,7 @@ func wrapResponseType(
 	wrapper.Fields = append(wrapper.Fields, &ir.Field{
 		Name: "Response",
 		Type: t,
+		Tag:  ir.Tag{JSON: "response"},
 	})
 
 	return wrapper, nil
@@ -455,6 +458,7 @@ func injectHeaderFields(headers map[string]*ir.Parameter, t *ir.Type) {
 		t.Fields = append(t.Fields, &ir.Field{
 			Name: h.Name,
 			Type: h.Type,
+			Tag:  ir.Tag{JSON: key},
 		})
 	}
 }

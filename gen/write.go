@@ -5,6 +5,7 @@ import (
 	"context"
 	"fmt"
 	"os"
+	"path/filepath"
 	"regexp"
 	"runtime"
 	"runtime/pprof"
@@ -14,7 +15,6 @@ import (
 
 	"github.com/go-faster/errors"
 	"golang.org/x/sync/errgroup"
-	"golang.org/x/tools/imports"
 
 	"github.com/grnsv/lcodegen/gen/ir"
 	"github.com/grnsv/lcodegen/internal/xmaps"
@@ -201,12 +201,12 @@ func putBuffer(b *bytes.Buffer) {
 	bufPool.Put(b)
 }
 
-// Generate executes template to file using config.
-func (w *writer) Generate(templateName, fileName string, cfg TemplateConfig) (rerr error) {
+// Generate executes template to file using provided data.
+func (w *writer) Generate(templateName, fileName string, data any) (rerr error) {
 	buf := getBuffer()
 	defer putBuffer(buf)
 
-	if err := w.t.ExecuteTemplate(buf, templateName, cfg); err != nil {
+	if err := w.t.ExecuteTemplate(buf, templateName, data); err != nil {
 		return errors.Wrap(err, "execute")
 	}
 
@@ -217,91 +217,38 @@ func (w *writer) Generate(templateName, fileName string, cfg TemplateConfig) (re
 		}
 	}()
 
-	formatted, err := imports.Process(fileName, generated, nil)
-	if err != nil {
-		return &ErrGoFormat{
-			err: err,
-		}
-	}
-
-	if err := w.fs.WriteFile(fileName, formatted); err != nil {
+	if err := w.fs.WriteFile(fileName, generated); err != nil {
 		return errors.Wrap(err, "write")
 	}
 
 	return nil
 }
 
+// LaravelPaths contains paths for Laravel code generation.
+type LaravelPaths struct {
+	RoutesFile      string
+	UserControllers string
+	UserRequests    string
+	Controllers     string
+	Requests        string
+	Responses       string
+	Dto             string
+}
+
 // WriteSource writes generated definitions to fs.
-func (g *Generator) WriteSource(fs FileSystem, pkgName string) error {
+func (g *Generator) WriteSource(fs FileSystem, pkgName string, laravelPaths LaravelPaths) error {
 	w := &writer{
 		fs: fs,
 		t:  vendoredTemplates(),
 	}
 
-	// Historically we separate interfaces from other types.
-	// This is done for backward compatibility.
-	types := make(map[string]*ir.Type, len(g.tstorage.types))
-	interfaces := make(map[string]*ir.Type)
-	for name, t := range g.tstorage.types {
-		if t.IsInterface() {
-			interfaces[name] = t
-			continue
-		}
-
-		types[name] = t
-	}
-
-	features, err := g.opt.Features.Build()
-	if err != nil {
-		return errors.Wrap(err, "build feature set")
-	}
-	cfg := TemplateConfig{
-		Package:                   pkgName,
-		Operations:                g.operations,
-		DefaultOperations:         g.defaultOperations,
-		OperationGroups:           g.operationGroups,
-		Webhooks:                  g.webhooks,
-		Types:                     types,
-		Interfaces:                interfaces,
-		Error:                     g.errType,
-		ErrorType:                 nil,
-		Servers:                   g.servers,
-		Securities:                g.securities,
-		Router:                    g.router,
-		WebhookRouter:             g.webhookRouter,
-		Imports:                   g.imports,
-		PathsClientEnabled:        features.Has(PathsClient),
-		PathsServerEnabled:        features.Has(PathsServer),
-		WebhookClientEnabled:      features.Has(WebhooksClient) && len(g.webhooks) > 0,
-		WebhookServerEnabled:      features.Has(WebhooksServer) && len(g.webhooks) > 0,
-		OpenTelemetryEnabled:      features.Has(OgenOtel),
-		SecurityReentrantEnabled:  features.Has(ClientSecurityReentrant),
-		RequestOptionsEnabled:     features.Has(ClientRequestOptions),
-		RequestValidationEnabled:  features.Has(ClientRequestValidation),
-		ResponseValidationEnabled: features.Has(ServerResponseValidation),
-		EditorsEnabled:            features.Has(ClientEditors),
-		// Unused for now.
-		skipTestRegex: nil,
-	}
-	if cfg.Error != nil {
-		if len(cfg.Error.Contents) != 1 {
-			panic(unreachable("error type must have exactly one content type"))
-		}
-		for _, media := range cfg.Error.Contents {
-			if media.Encoding.JSON() {
-				cfg.ErrorType = media.Type
-				break
-			}
-		}
-	}
-
 	grp, ctx := errgroup.WithContext(context.Background())
 	grp.SetLimit(runtime.GOMAXPROCS(0))
-	generate := func(fileName, templateName string) {
+	generate := func(templateName, fileName string, data any) {
 		grp.Go(func() (err error) {
 			labels := pprof.Labels("template", templateName)
 			pprof.Do(ctx, labels, func(ctx context.Context) {
-				err = w.Generate(templateName, fileName, cfg)
+				err = w.Generate(templateName, fileName, data)
 			})
 			if err != nil {
 				return errors.Wrapf(err, "template %q", templateName)
@@ -309,61 +256,86 @@ func (g *Generator) WriteSource(fs FileSystem, pkgName string) error {
 			return nil
 		})
 	}
-	var (
-		genClient = cfg.AnyClientEnabled()
-		genServer = cfg.AnyServerEnabled()
-	)
-	for _, t := range []struct {
-		name    string
-		enabled bool
-	}{
-		{"schemas", true},
-		{"uri", g.hasURIObjectParams()},
-		{"json", g.hasJSON()},
-		{"interfaces", len(interfaces) > 0},
-		{"parameters", g.hasParams()},
-		{"handlers", genServer},
-		{"request_encoders", genClient},
-		{"request_decoders", genServer},
-		{"response_encoders", genServer},
-		{"response_decoders", genClient},
-		{"validators", g.hasValidators()},
-		{"middleware", genServer},
-		{"server", genServer},
-		{"client", genClient},
-		{"cfg", true},
-		{"servers", len(g.servers) > 0},
-		{"router", genServer},
-		{"defaults", g.hasDefaultFields()},
-		{"security", (genClient || genServer) && len(g.securities) > 0},
-		{"test_examples", features.Has(DebugExampleTests)},
-		{"faker", features.Has(DebugExampleTests)},
-		{"unimplemented", features.Has(OgenUnimplemented) && genServer},
-		{"labeler", features.Has(OgenOtel) && genServer},
-		{"operations", (genClient || genServer)},
-	} {
-		t := t
-		if !t.enabled {
-			continue
-		}
 
-		fileName := fmt.Sprintf("oas_%s_gen.go", t.name)
-		if t.name == "test_examples" {
-			fileName = fmt.Sprintf("oas_%s_gen_test.go", t.name)
+	generateWithUserFile := func(baseTemplate, userTemplate, baseDir, userDir, baseName, userName string, data any) {
+		generate(baseTemplate, filepath.Join(baseDir, baseName), data)
+		userFileName := filepath.Join(userDir, userName)
+		if _, err := os.Stat(userFileName); err != nil {
+			generate(userTemplate, userFileName, data)
 		}
-
-		generate(fileName, t.name)
 	}
 
-	// Generate Equal() and Hash() methods for complex uniqueItems validation
-	if len(g.equalitySpecs) > 0 {
-		grp.Go(func() error {
-			return g.generateEqualityMethodsWithFS(fs, pkgName)
-		})
-		// Generate validateUnique[TypeName]() functions for runtime validation
-		grp.Go(func() error {
-			return g.generateUniqueValidators(fs, pkgName)
-		})
+	// Generate routes
+	generate("routes", laravelPaths.RoutesFile, g.operationGroups)
+
+	for _, group := range g.operationGroups {
+		// Controller (base + user)
+		generateWithUserFile(
+			"controller/file", "user_controller/file",
+			laravelPaths.Controllers, laravelPaths.UserControllers,
+			fmt.Sprintf("%sController.php", group.Name), fmt.Sprintf("%sController.php", group.Name),
+			group,
+		)
+
+		for _, op := range group.Operations {
+			// Request (base + user)
+			if op.Laravel.NeedsRequest {
+				generateWithUserFile(
+					"request/file", "user_request/file",
+					laravelPaths.Requests, laravelPaths.UserRequests,
+					fmt.Sprintf("%sRequest.php", op.Name), fmt.Sprintf("%sRequest.php", op.Name),
+					op,
+				)
+				if op.Laravel.NeedsParamsDto {
+					generate("params/file", filepath.Join(laravelPaths.Dto, fmt.Sprintf("%sParams.php", op.Name)), op)
+				}
+			}
+
+			// Response
+			if name := op.Laravel.ResponseClassName; name != "" {
+				generate("response/file", filepath.Join(laravelPaths.Responses, fmt.Sprintf("%s.php", name)), op)
+			}
+		}
+	}
+
+	// Webhook requests
+	for _, op := range g.webhooks {
+		if op.Laravel.NeedsRequest {
+			generateWithUserFile(
+				"request/file", "user_request/file",
+				laravelPaths.Requests, laravelPaths.UserRequests,
+				fmt.Sprintf("%sRequest.php", op.Name), fmt.Sprintf("%sRequest.php", op.Name),
+				op,
+			)
+			if op.Laravel.NeedsParamsDto {
+				generate("params/file", filepath.Join(laravelPaths.Dto, fmt.Sprintf("%sParams.php", op.Name)), op)
+			}
+		}
+	}
+
+	// Error response
+	if errType := g.ErrorType(); errType != nil {
+		generate("error_response/file", filepath.Join(laravelPaths.Responses, "ErrorResponse.php"), errType)
+	}
+
+	// Enum classes
+	for _, t := range g.EnumTypes() {
+		generate("schema/enum", filepath.Join(laravelPaths.Dto, fmt.Sprintf("%s.php", t.Name)), t)
+	}
+
+	// DTO classes
+	for _, t := range g.DTOTypes() {
+		generate("dto/file", filepath.Join(laravelPaths.Dto, fmt.Sprintf("%s.php", t.Name)), t)
+	}
+
+	// Array alias DTO classes (typed collections)
+	for _, t := range g.ArrayAliasDTOTypes() {
+		generate("dto_array/file", filepath.Join(laravelPaths.Dto, fmt.Sprintf("%s.php", t.Name)), t)
+	}
+
+	// Generic wrapper classes (OptString, OptNilBool, etc.)
+	for _, t := range g.GenericTypes() {
+		generate("optional/file", filepath.Join(laravelPaths.Dto, fmt.Sprintf("%s.php", t.Name)), t)
 	}
 
 	return grp.Wait()
@@ -404,4 +376,35 @@ func (g *Generator) hasURIObjectParams() bool {
 	return g.hasAnyType(func(t *ir.Type) bool {
 		return (t.IsStruct() || t.IsMap()) && t.HasFeature("uri")
 	})
+}
+
+// OperationGroups returns operation groups for Laravel generation.
+func (g *Generator) OperationGroups() []*ir.OperationGroup {
+	return g.operationGroups
+}
+
+// ErrorType returns the common error response type if available.
+func (g *Generator) ErrorType() *ir.Response {
+	return g.errType
+}
+
+// DTOTypes returns struct types that should be exposed as DTOs.
+func (g *Generator) DTOTypes() []*ir.Type {
+	return g.dtoTypes
+}
+
+// ArrayAliasDTOTypes returns alias types that wrap arrays (typed collections like Pets = []Pet).
+func (g *Generator) ArrayAliasDTOTypes() []*ir.Type {
+	return g.arrayAliasDTOs
+}
+
+// EnumTypes returns enum types that should be exposed as PHP enum classes.
+func (g *Generator) EnumTypes() []*ir.Type {
+	return g.enumTypes
+}
+
+// GenericTypes returns generic wrapper types (OptString, OptNilBool, etc.).
+// Only includes types that are actually referenced by struct fields.
+func (g *Generator) GenericTypes() []*ir.Type {
+	return g.genericTypes
 }

@@ -201,7 +201,7 @@ func generate(f file, skipWrite bool) *GenerateError {
 	}
 
 	if !skipWrite {
-		if err := g.WriteSource(nopFs{}, "api"); err != nil {
+		if err := g.WriteSource(nopFs{}, "api", gen.LaravelPaths{}); err != nil {
 			if _, ok := errors.Into[*gen.ErrGoFormat](err); ok {
 				return &GenerateError{stage: Format, notImpl: notImpl, err: err}
 			}

@@ -1,0 +1,118 @@
+{{- /* Common PHP templates shared across multiple files */ -}}
+
+{{ define "php/type" }}
+{{- /*gotype: github.com/grnsv/lcodegen/gen/ir.Type*/ -}}
+{{- if .IsArray -}}
+array
+{{- else if .IsMap -}}
+array
+{{- else if .IsPointer -}}
+{{- if .PointerTo.IsSum -}}
+null|{{ template "php/type" .PointerTo }}
+{{- else -}}
+?{{ template "php/type" .PointerTo }}
+{{- end -}}
+{{- else if .IsGeneric -}}
+{{- if .GenericOf.IsSum -}}
+null|{{ template "php/type" .GenericOf }}
+{{- else -}}
+?{{ template "php/type" .GenericOf }}
+{{- end -}}
+{{- else if .IsExternal -}}
+{{ template "php/schema_type" . }}
+{{- else if .IsPrimitive -}}
+{{- $p := .Primitive.String -}}
+{{- if eq $p "string" -}}
+string
+{{- else if eq $p "int" -}}
+int
+{{- else if eq $p "int8" -}}
+int
+{{- else if eq $p "int16" -}}
+int
+{{- else if eq $p "int32" -}}
+int
+{{- else if eq $p "int64" -}}
+int
+{{- else if eq $p "uint" -}}
+int
+{{- else if eq $p "uint8" -}}
+int
+{{- else if eq $p "uint16" -}}
+int
+{{- else if eq $p "uint32" -}}
+int
+{{- else if eq $p "uint64" -}}
+int
+{{- else if eq $p "float32" -}}
+float
+{{- else if eq $p "float64" -}}
+float
+{{- else if eq $p "bool" -}}
+bool
+{{- else if eq $p "time.Time" -}}
+string
+{{- else if eq $p "uuid.UUID" -}}
+string
+{{- else if eq $p "url.URL" -}}
+string
+{{- else if eq $p "netip.Addr" -}}
+string
+{{- else if eq $p "net.HardwareAddr" -}}
+string
+{{- else if eq $p "[]byte" -}}
+string
+{{- else if eq $p "decimal.Decimal" -}}
+string
+{{- else if eq $p "time.Duration" -}}
+string
+{{- else if eq $p "ht.MultipartFile" -}}
+\Illuminate\Http\UploadedFile
+{{- else -}}
+mixed
+{{- end -}}
+{{- else if .IsEnum -}}
+{{ .Name }}
+{{- else if .IsAlias -}}
+{{- if .AliasTo.IsArray -}}
+{{ .Name }}
+{{- else -}}
+{{ template "php/type" .AliasTo }}
+{{- end -}}
+{{- else if .IsStruct -}}
+{{ .Name }}
+{{- else if .IsSum -}}
+{{- range $i, $v := dedupeSumTypes .SumOf }}{{ if $i }}|{{ end }}{{ template "php/type" $v }}{{ end -}}
+{{- else -}}
+mixed
+{{- end -}}
+{{- end }}
+
+{{- /* Same as php/type but unwraps pointer/generic without adding nullable prefix */ -}}
+{{ define "php/base_type" }}
+{{- /*gotype: github.com/grnsv/lcodegen/gen/ir.Type*/ -}}
+{{- if .IsPointer -}}
+{{ template "php/base_type" .PointerTo }}
+{{- else if .IsGeneric -}}
+{{ template "php/base_type" .GenericOf }}
+{{- else -}}
+{{ template "php/type" . }}
+{{- end -}}
+{{- end }}
+
+{{- /* Map OpenAPI schema type to PHP type for external types */ -}}
+{{ define "php/schema_type" }}
+{{- /*gotype: github.com/grnsv/lcodegen/gen/ir.Type*/ -}}
+{{- $st := .Schema.Type.String -}}
+{{- if eq $st "string" -}}
+string
+{{- else if eq $st "integer" -}}
+int
+{{- else if eq $st "number" -}}
+float
+{{- else if eq $st "boolean" -}}
+bool
+{{- else -}}
+mixed
+{{- end -}}
+{{- end }}

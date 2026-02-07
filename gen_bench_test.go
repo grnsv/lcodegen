@@ -52,7 +52,7 @@ func BenchmarkGenerator(b *testing.B) {
 				if err != nil {
 					b.Fatal(err)
 				}
-				if err := g.WriteSource(fs, "api"); err != nil {
+				if err := g.WriteSource(fs, "api", gen.LaravelPaths{}); err != nil {
 					b.Fatal(err)
 				}
 			}

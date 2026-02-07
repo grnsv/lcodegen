@@ -14,7 +14,6 @@ import (
 
 	"github.com/go-faster/errors"
 
-	"github.com/grnsv/lcodegen/internal/naming"
 	"github.com/grnsv/lcodegen/jsonschema"
 )
 
@@ -76,7 +75,7 @@ func (g *nameGen) generate() (string, error) {
 		part     []rune
 		upper    = true
 		pushPart = func() {
-			g.parts = append(g.parts, g.checkPart(string(part)))
+			g.parts = append(g.parts, string(part))
 			part = nil
 		}
 	)
@@ -122,7 +121,7 @@ func (g *nameGen) clean() string {
 	var (
 		part     []rune
 		pushPart = func() {
-			g.parts = append(g.parts, g.checkPart(string(part)))
+			g.parts = append(g.parts, string(part))
 			part = nil
 		}
 	)
@@ -153,13 +152,6 @@ func (g *nameGen) isAllowed(r rune) bool {
 	r = unicode.ToLower(r)
 	return (r >= 'a' && r <= 'z') ||
 		(r >= '0' && r <= '9')
-}
-
-func (g *nameGen) checkPart(part string) string {
-	if rule, ok := naming.Rule(part); ok {
-		return rule
-	}
-	return part
 }
 
 func cleanSpecial(strs ...string) string {

@@ -24,23 +24,17 @@ func checkStructRecursions(s *ir.Type) error {
 					t = t.GenericOf
 				}
 
-				switch {
-				case v.OnlyOptional():
-					return ir.Pointer(t, ir.NilOptional), nil
-				case v.OnlyNullable():
-					return ir.Pointer(t, ir.NilNull), nil
-				case v.NullableOptional():
-					t, err := boxType(t, ir.GenericVariant{
-						Optional: true,
-					})
-					if err != nil {
-						return nil, err
-					}
-					return ir.Pointer(t, ir.NilNull), nil
-				default:
-					// Required.
-					return nil, errors.Errorf("infinite recursion: %s.%s is required", s.Name, field.Name)
+				if !v.Any() {
+					// In PHP, all objects are references, so required recursive
+					// fields don't cause infinite size issues. Skip them.
+					return t, nil
 				}
+
+				postfix, err := genericPostfix(t)
+				if err != nil {
+					return nil, errors.Wrap(err, "postfix")
+				}
+				return ir.Generic(postfix, t, v), nil
 			}
 			return t, nil
 		}(field.Type)
