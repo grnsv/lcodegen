@@ -1,4 +1,3 @@
-// Binary ogen generates go source code from OAS.
 package main
 
 import (
