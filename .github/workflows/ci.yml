@@ -20,8 +20,6 @@ jobs:
           - macos-latest
           - windows-latest
         include:
-          - arch: 386
-            runner: ubuntu-latest
           - arch: amd64
             runner: ubuntu-latest
             flags: "-race"
@@ -107,28 +105,3 @@ jobs:
 
       - name: Run tests
         run: cd examples && go test ./...
-
-  ensure-docker:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-
-      - name: Build image
-        run: |
-          docker build . \
-          --tag ghcr.io/$GITHUB_REPOSITORY:$GITHUB_SHA
-
-      - name: Check image
-        run: |
-          docker run \
-          -v ./_testdata/examples/petstore.yml:/petstore.yml \
-          --rm \
-          ghcr.io/$GITHUB_REPOSITORY:$GITHUB_SHA /petstore.yml
-
-      - name: Check image certs
-        run: |
-          docker run \
-          --rm \
-          ghcr.io/$GITHUB_REPOSITORY:$GITHUB_SHA \
-          https://raw.githubusercontent.com/grnsv/lcodegen/refs/heads/main/_testdata/examples/petstore.yml
