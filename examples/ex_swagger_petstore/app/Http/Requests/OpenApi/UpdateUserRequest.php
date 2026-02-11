@@ -4,6 +4,7 @@
 
 namespace App\Http\Requests\OpenApi;
 
+use App\Http\Dto\OpenApi as Dto;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -30,14 +31,23 @@ abstract class UpdateUserRequest extends FormRequest
             'password' => ['sometimes', 'string'],
             'phone' => ['sometimes', 'string'],
             'userStatus' => ['sometimes', 'integer', 'min:-2147483648', 'max:2147483647'],
-            'id' => ['sometimes', 'integer'],
-            'username' => ['sometimes', 'string'],
-            'firstName' => ['sometimes', 'string'],
-            'lastName' => ['sometimes', 'string'],
-            'email' => ['sometimes', 'string'],
-            'password' => ['sometimes', 'string'],
-            'phone' => ['sometimes', 'string'],
-            'userStatus' => ['sometimes', 'integer', 'min:-2147483648', 'max:2147483647'],
         ];
+    }
+
+    /**
+     * Get the validated data from the request.
+     *
+     * @param array|int|string|null $key
+     * @param mixed $default
+     * @return Dto\UpdateUserApplicationJson|mixed
+     */
+    public function validated($key = null, $default = null): mixed
+    {
+        $validated = parent::validated($key, $default);
+        if ($key === null) {
+            return Dto\UpdateUserApplicationJson::fromArray($validated);
+        }
+
+        return $validated;
     }
 }

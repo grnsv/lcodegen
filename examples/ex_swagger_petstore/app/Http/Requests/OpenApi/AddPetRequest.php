@@ -37,13 +37,13 @@ abstract class AddPetRequest extends FormRequest
      *
      * @param array|int|string|null $key
      * @param mixed $default
-     * @return Dto\Pet|mixed
+     * @return Dto\AddPetApplicationJson|mixed
      */
     public function validated($key = null, $default = null): mixed
     {
         $validated = parent::validated($key, $default);
         if ($key === null) {
-            return Dto\Pet::fromArray($validated);
+            return Dto\AddPetApplicationJson::fromArray($validated);
         }
 
         return $validated;

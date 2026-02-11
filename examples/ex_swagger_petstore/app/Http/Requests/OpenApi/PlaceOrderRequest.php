@@ -4,6 +4,7 @@
 
 namespace App\Http\Requests\OpenApi;
 
+use App\Http\Dto\OpenApi as Dto;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -26,12 +27,23 @@ abstract class PlaceOrderRequest extends FormRequest
             'shipDate' => ['sometimes', 'date'],
             'status' => ['sometimes', 'string', Rule::enum(\App\Http\Dto\OpenApi\OrderStatus::class)],
             'complete' => ['sometimes', 'boolean'],
-            'id' => ['sometimes', 'integer'],
-            'petId' => ['sometimes', 'integer'],
-            'quantity' => ['sometimes', 'integer', 'min:-2147483648', 'max:2147483647'],
-            'shipDate' => ['sometimes', 'date'],
-            'status' => ['sometimes', 'string', Rule::enum(\App\Http\Dto\OpenApi\OrderStatus::class)],
-            'complete' => ['sometimes', 'boolean'],
         ];
+    }
+
+    /**
+     * Get the validated data from the request.
+     *
+     * @param array|int|string|null $key
+     * @param mixed $default
+     * @return Dto\PlaceOrderApplicationJson|mixed
+     */
+    public function validated($key = null, $default = null): mixed
+    {
+        $validated = parent::validated($key, $default);
+        if ($key === null) {
+            return Dto\PlaceOrderApplicationJson::fromArray($validated);
+        }
+
+        return $validated;
     }
 }
