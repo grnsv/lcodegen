@@ -470,6 +470,12 @@ func computeOperationMeta(op *ir.Operation) *ir.LaravelMeta {
 		HasValidatedDto: hasValidatedDto(op),
 	}
 
+	if op.Request != nil {
+		if media, ok := preferredMedia(op.Request.Contents); ok {
+			m.RequestBodyType = media.Type
+		}
+	}
+
 	if m.HasValidatedDto {
 		m.ValidatedTypeName = validatedTypeName(op)
 	}
@@ -628,13 +634,17 @@ func needsParamsDto(op *ir.Operation) bool {
 	return op.HasQueryParams() || op.HasHeaderParams()
 }
 
-// getBodyType extracts the underlying type from the request body,
+// getBodyType extracts the underlying type from the preferred request body content type,
 // unwrapping Generic and Pointer wrappers.
 func getBodyType(op *ir.Operation) *ir.Type {
 	if op.Request == nil {
 		return nil
 	}
-	t := op.Request.Type
+	media, ok := preferredMedia(op.Request.Contents)
+	if !ok {
+		return nil
+	}
+	t := media.Type
 	if t.IsGeneric() {
 		t = t.GenericOf
 	}

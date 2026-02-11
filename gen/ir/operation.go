@@ -41,6 +41,7 @@ type OperationGroup struct {
 type LaravelMeta struct {
 	NeedsRequest       bool   // needs FormRequest
 	HasRequestBody     bool   // op.Request != nil
+	RequestBodyType    *Type  // preferred request body type (from JSON or first content type)
 	NeedsParamsDto     bool   // needs separate Params DTO (query/header params)
 	HasDefaults        bool   // has default values in params/body
 	HasValidatedDto    bool   // has meaningful DTO for validated()

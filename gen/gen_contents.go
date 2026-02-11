@@ -215,10 +215,6 @@ func (g *Generator) generateFormContent(
 				if err := isSupportedParamStyle(spec); err != nil {
 					return err
 				}
-
-				if err := isParamAllowed(f.Type, true, map[*ir.Type]struct{}{}); err != nil {
-					return err
-				}
 			case ir.EncodingJSON, ir.EncodingProblemJSON:
 				spec.Content = &openapi.ParameterContent{
 					Name: ct.String(),

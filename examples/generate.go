@@ -24,9 +24,9 @@ import (
 //go:generate go run ../cmd/lcodegen -v --target ./ex_openai            ../_testdata/examples/openai.yml
 //go:generate go run ../cmd/lcodegen -v --target ./ex_oauth2            ../_testdata/examples/petstore-oauth2.yml
 //go:generate go run ../cmd/lcodegen -v --target ./ex_oauth2_scopes_and_or ../_testdata/examples/oauth2-scopes-and-or.yml
+//go:generate go run ../cmd/lcodegen -v --target ./ex_swagger_petstore     ../_testdata/examples/swagger-petstore-1.0.27.yaml
 
 // Partially supported:
 //
-//go:generate go run ../cmd/lcodegen -v --target ./ex_swagger_petstore --config config/swagger-petstore.yml ../_testdata/examples/swagger-petstore-1.0.27.yaml
-//go:generate go run ../cmd/lcodegen -v --target ./ex_k8s              --config config/k8s.yml              ../_testdata/examples/k8s.json
-//go:generate go run ../cmd/lcodegen -v --target ./ex_github           --config config/github.yml           ../_testdata/examples/api.github.com.json
+//go:generate go run ../cmd/lcodegen -v --target ./ex_k8s    --config config/k8s.yml    ../_testdata/examples/k8s.json
+//go:generate go run ../cmd/lcodegen -v --target ./ex_github --config config/github.yml ../_testdata/examples/api.github.com.json

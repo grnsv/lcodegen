@@ -51,10 +51,8 @@ abstract class {{ .Name }}Request extends FormRequest
 {{- template "request/array_item_rules" $p }}
 {{- end }}
 {{- /* Body parameters */ -}}
-{{- if .Request }}
-{{- range $contentType, $media := .Request.Contents }}
-{{- template "request/rules" $media.Type }}
-{{- end }}
+{{- if .Laravel.RequestBodyType }}
+{{- template "request/rules" .Laravel.RequestBodyType }}
 {{- end }}
         ];
     }
@@ -304,13 +302,11 @@ Rule::enum(\App\Http\Dto\OpenApi\{{ .Name }}::class)
         }
 {{- end }}
 {{- end }}
-{{- if .Request }}
-{{- range $ct, $media := .Request.Contents }}
-{{- range $f := $media.Type.DefaultFields }}
+{{- if .Laravel.RequestBodyType }}
+{{- range $f := .Laravel.RequestBodyType.DefaultFields }}
         if ($this->missing('{{ $f.Spec.Name }}')) {
             $this->getInputSource()->set('{{ $f.Spec.Name }}', {{ print_php $f.Default.Value }});
         }
-{{- end }}
 {{- end }}
 {{- end }}
     }
