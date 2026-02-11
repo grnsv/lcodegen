@@ -27,5 +27,6 @@ import (
 
 // Partially supported:
 //
-//go:generate go run ../cmd/lcodegen -v --target ./ex_k8s    --config config/k8s.yml    ../_testdata/examples/k8s.json
-//go:generate go run ../cmd/lcodegen -v --target ./ex_github --config config/github.yml ../_testdata/examples/api.github.com.json
+//go:generate go run ../cmd/lcodegen -v --target ./ex_swagger_petstore --config config/swagger-petstore.yml ../_testdata/examples/swagger-petstore-1.0.27.yaml
+//go:generate go run ../cmd/lcodegen -v --target ./ex_k8s              --config config/k8s.yml              ../_testdata/examples/k8s.json
+//go:generate go run ../cmd/lcodegen -v --target ./ex_github           --config config/github.yml           ../_testdata/examples/api.github.com.json

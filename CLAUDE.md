@@ -154,9 +154,7 @@ When modifying templates:
 1. Edit `.tmpl` files in `gen/_template/`
 2. Test generation in a temporary directory to avoid polluting the project:
    ```bash
-   go build -o /tmp/lcodegen-bin ./cmd/lcodegen
-   mkdir -p /tmp/lcodegen-test && cd /tmp/lcodegen-test
-   /tmp/lcodegen-bin /path/to/_testdata/examples/petstore-expanded.yml
+   go run ./cmd/lcodegen --target /tmp/lcodegen-test _testdata/examples/swagger-petstore.yml
    ```
 3. Run `make test` to validate
 4. Run `make generate examples` to regenerate all examples if needed
