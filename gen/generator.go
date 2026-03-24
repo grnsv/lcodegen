@@ -773,6 +773,13 @@ func (g *Generator) computeTypeLists() {
 			}
 		}
 	}
+	for _, op := range slices.Concat(g.operations, g.webhooks) {
+		for _, p := range op.Params {
+			if p.Type.IsGeneric() {
+				referenced[p.Type.Name] = true
+			}
+		}
+	}
 
 	for _, t := range g.tstorage.types {
 		switch {
