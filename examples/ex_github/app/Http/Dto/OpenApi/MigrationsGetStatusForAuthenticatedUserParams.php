@@ -19,7 +19,7 @@ final readonly class MigrationsGetStatusForAuthenticatedUserParams
     public static function fromArray(array $data): self
     {
         return new self(
-            exclude: $data['exclude'],
+            exclude: $data['exclude'] ?? [],
         );
     }
 }

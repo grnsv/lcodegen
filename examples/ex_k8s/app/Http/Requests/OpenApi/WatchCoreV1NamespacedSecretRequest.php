@@ -6,7 +6,6 @@ namespace App\Http\Requests\OpenApi;
 
 use App\Http\Dto\OpenApi as Dto;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
 /**
  * Auto-generated form request from OpenAPI specification.

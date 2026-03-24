@@ -27,7 +27,7 @@ final readonly class MigrationsListForOrgParams
             page: \array_key_exists('page', $data)
                 ? OptInt::some($data['page'])
                 : OptInt::none(),
-            exclude: $data['exclude'],
+            exclude: $data['exclude'] ?? [],
         );
     }
 }

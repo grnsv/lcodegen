@@ -468,6 +468,7 @@ func computeOperationMeta(op *ir.Operation) *ir.LaravelMeta {
 		NeedsParamsDto:  needsParamsDto(op),
 		HasDefaults:     opHasDefaults(op),
 		HasValidatedDto: hasValidatedDto(op),
+		HasEnumRule:     opHasEnumRule(op),
 	}
 
 	if op.Request != nil {
@@ -690,6 +691,51 @@ func opHasDefaults(op *ir.Operation) bool {
 	if op.Request != nil {
 		for _, media := range op.Request.Contents {
 			if media.Type.HasDefaultFields() {
+				return true
+			}
+		}
+	}
+	return false
+}
+
+// typeHasEnum returns true if the type tree contains any enum type.
+func typeHasEnum(t *ir.Type) bool {
+	switch {
+	case t.IsEnum():
+		return true
+	case t.IsPointer():
+		return typeHasEnum(t.PointerTo)
+	case t.IsGeneric():
+		return typeHasEnum(t.GenericOf)
+	case t.IsAlias():
+		return typeHasEnum(t.AliasTo)
+	case t.IsArray():
+		return t.Item != nil && typeHasEnum(t.Item)
+	case t.IsStruct():
+		for _, f := range t.Fields {
+			if typeHasEnum(f.Type) {
+				return true
+			}
+		}
+		return false
+	case t.IsSum():
+		return slices.ContainsFunc(t.SumOf, typeHasEnum)
+	default:
+		return false
+	}
+}
+
+// opHasEnumRule returns true if the operation has any enum fields
+// that will produce Rule::enum() in validation rules.
+func opHasEnumRule(op *ir.Operation) bool {
+	for _, p := range op.Params {
+		if typeHasEnum(p.Type) {
+			return true
+		}
+	}
+	if op.Request != nil {
+		for _, media := range op.Request.Contents {
+			if typeHasEnum(media.Type) {
 				return true
 			}
 		}

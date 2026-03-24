@@ -69,6 +69,8 @@ final readonly class {{ .Name }}Params
             {{ camelSpecial $p.Spec.Name }}: \array_key_exists('{{ $p.Spec.Name }}', $data)
                 ? {{ $p.Type.Name }}::some($data['{{ $p.Spec.Name }}'])
                 : {{ $p.Type.Name }}::none(),
+{{- else if and (not $p.Spec.Required) $p.Type.IsArray }}
+            {{ camelSpecial $p.Spec.Name }}: $data['{{ $p.Spec.Name }}'] ?? [],
 {{- else }}
             {{ camelSpecial $p.Spec.Name }}: $data['{{ $p.Spec.Name }}'],
 {{- end }}
@@ -78,6 +80,8 @@ final readonly class {{ .Name }}Params
             {{ camelSpecial $p.Spec.Name }}: \array_key_exists('{{ $p.Spec.Name }}', $data)
                 ? {{ $p.Type.Name }}::some($data['{{ $p.Spec.Name }}'])
                 : {{ $p.Type.Name }}::none(),
+{{- else if and (not $p.Spec.Required) $p.Type.IsArray }}
+            {{ camelSpecial $p.Spec.Name }}: $data['{{ $p.Spec.Name }}'] ?? [],
 {{- else }}
             {{ camelSpecial $p.Spec.Name }}: $data['{{ $p.Spec.Name }}'],
 {{- end }}
@@ -94,6 +98,8 @@ final readonly class {{ .Name }}Params
             {{ camelSpecial $f.Spec.Name }}: \array_key_exists('{{ $f.Spec.Name }}', $data)
                 ? {{ $f.Type.Name }}::some($data['{{ $f.Spec.Name }}'])
                 : {{ $f.Type.Name }}::none(),
+{{- else if and (not $f.Spec.Required) $f.Type.IsArray }}
+            {{ camelSpecial $f.Spec.Name }}: $data['{{ $f.Spec.Name }}'] ?? [],
 {{- else }}
             {{ camelSpecial $f.Spec.Name }}: $data['{{ $f.Spec.Name }}'],
 {{- end }}
@@ -107,6 +113,8 @@ final readonly class {{ .Name }}Params
             {{ camelSpecial $f.Spec.Name }}: \array_key_exists('{{ $f.Spec.Name }}', $data)
                 ? {{ $f.Type.Name }}::some($data['{{ $f.Spec.Name }}'])
                 : {{ $f.Type.Name }}::none(),
+{{- else if and (not $f.Spec.Required) $f.Type.IsArray }}
+            {{ camelSpecial $f.Spec.Name }}: $data['{{ $f.Spec.Name }}'] ?? [],
 {{- else }}
             {{ camelSpecial $f.Spec.Name }}: $data['{{ $f.Spec.Name }}'],
 {{- end }}

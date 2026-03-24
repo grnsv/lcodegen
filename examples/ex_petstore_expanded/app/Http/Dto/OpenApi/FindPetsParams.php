@@ -20,7 +20,7 @@ final readonly class FindPetsParams
     public static function fromArray(array $data): self
     {
         return new self(
-            tags: $data['tags'],
+            tags: $data['tags'] ?? [],
             limit: \array_key_exists('limit', $data)
                 ? OptInt32::some($data['limit'])
                 : OptInt32::none(),

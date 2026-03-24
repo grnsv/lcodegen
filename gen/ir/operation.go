@@ -45,6 +45,7 @@ type LaravelMeta struct {
 	NeedsParamsDto     bool   // needs separate Params DTO (query/header params)
 	HasDefaults        bool   // has default values in params/body
 	HasValidatedDto    bool   // has meaningful DTO for validated()
+	HasEnumRule        bool   // has enum fields requiring Rule::enum()
 	ValidatedTypeName  string // DTO class name for validated()
 	ResponseClassName  string // "AddPetResponse" or ""
 	SuccessStatusCode  int    // HTTP status code of success response (200 by default)
